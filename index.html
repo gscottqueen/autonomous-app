@@ -1,17 +1,87 @@
 <html>
 <head>
-	<title></title>
-</head>
-<body>
-<div>This is my site idea</div>
-<nav>
-	<div>LOGO</div>
-	<ul>
-		<li><a href="">Home</a></li>
-		<li><<a href="">About</a></li>
-		<li><<a href="">Data Sets</a></li>
-	</ul>
-</nav>
+	<title>Autonomous App</title>
+	<!-- latest jquery -->
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified d3 script -->
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="externall.css">
+
+</head>
+<body id="grad">
+	<nav class="sidenav">
+		<a class="icon" href="#"><span title="Source Data"><img src="./icons/SourceData.png" alt="Data Source"></span></a>
+	  <a class="icon" href="#"><span title="About"><img src="./icons/About.png" alt="About"></span></a>
+		<a class="icon" href="#"><span title="Share"><img src="./icons/Share.png" alt="Share"></span></a>
+	</nav>
+	<div class="container-fluid">
+	<div class="row">
+		<div class="leftgutter col-md-12">
+			<div class="row">
+			</div>
+				<div class="anchorline col-md-12">
+					<h1 class="title">Google Automated Data</h1>
+			</div>
+			<div class="row">
+				<div class="info1 col-md-3">
+					<h3>
+						Driving Mrs.Autonomous
+					</h3>
+					<p>
+						Industry trends in, <strong>trending industry.</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus.Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.
+					</p>
+				</div>
+				<div class="data col-md-9">
+					<script type="text/javscript">
+					var h=10;
+					var w=12;
+
+					var incidentsByMonth = [
+						{"month":1, "numberOfIncidents":2}
+						{"month":2, "numberOfIncidents":3}
+						{"month":3, "numberOfIncidents":9}
+						{"month":4, "numberOfIncidents":4}
+						{"month":5, "numberOfIncidents":6}
+						{"month":6, "numberOfIncidents":2}
+						{"month":7, "numberOfIncidents":2}
+						{"month":8, "numberOfIncidents":2}
+						{"month":9, "numberOfIncidents":2}
+						{"month":10, "numberOfIncidents":2}
+						{"month":11, "numberOfIncidents":2}
+						{"month":12, "numberOfIncidents":2}
+					];
+
+					//create svg
+					var svg = d3.select("body").append("svg").attr({width:w,height:h});
+					//create placeholder circles
+					var circleMaker=svg.selectAll("circle")
+						.data(incidentsByMonth)
+						.enter()
+						.append("circle");
+					//give circles attributes
+						.attr({
+						cx: function(d){return d.month*12},
+						cy: function(d){return h - d.numberOfIncidents),
+						r:5,
+						"fill":"white";}
+					})
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>
