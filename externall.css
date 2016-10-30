@@ -45,8 +45,8 @@ nav.sidenav a.icon img{
 
 }
 
-.data{
-  /*border: solid 2px #fff;*/
+#chart{
+  border: solid 2px #fff;
 }
 
 .info1{
@@ -57,13 +57,18 @@ nav.sidenav a.icon img{
     padding-left: 110px;
 }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+/*SVG*/
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
 }
-
-.dot {
-  stroke: #000;
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
 }
