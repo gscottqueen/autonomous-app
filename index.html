@@ -47,9 +47,7 @@
 		</div>
 	</div>
 	<script>
-		console.log("test")
-		var h=500;
-		var w=500;
+
 
 		var incidentsByMonth = [
 		{"month":1, "numberOfIncidents":2},
@@ -73,28 +71,41 @@
 			// Select the SVG Viewport selection
 		 			var svgContainer = dataSelection.append("svg")
 		       .attr("width",  800)
-		       .attr("height", 800);
+		       .attr("height", 600)
 
 			//  Draw the Cirlces
 					var circleSelection = svgContainer.append("circle")
-		 			 	.attr("cx", 15)
-		 				.attr("cy", 15)
+		 			 	.attr("cx", 200)
+		 				.attr("cy", 200)
 		 				.attr("r", 10)
 		 				.style("fill", "white");
 
 			//  Create the Scale we will use for the Axis
-				var axisScale = d3.scale.linear()
-					.domain([0,10])
-					.range([0,790]);
-
+				var xAxisScale = d3.scale.linear()
+					.domain([0,24])
+					.range([0,750]);
+				var yAxisScale = d3.scale.linear()
+					.domain([0,3])
+					.range([500,0]);
 			// Create the Axis
 				var xAxis = d3.svg.axis()
-					.scale(axisScale);
+					.scale(xAxisScale)
+					.orient("bottom");
 				typeof(xAxis)
+				var yAxis = d3.svg.axis()
+					.scale(yAxisScale)
+					.orient("left");;
+				typeof(yAxis)
 
 			//Create a group Element for the Axis elements and call the xAxis function
-				var xAxisGroup = svgContainer.append("g")
+				xAxisGroup = svgContainer.append("g")
+					.attr("class","xaxis")
+					.attr("transform", "translate(40,540)")
 					.call(xAxis);
+				yAxisGroup = svgContainer.append("g")
+					.attr("class","yaxis")
+					.attr("transform", "translate(40,40)")
+					.call(yAxis);
 
 
 		</script>

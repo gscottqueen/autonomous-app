@@ -72,3 +72,30 @@ nav.sidenav a.icon img{
     top: 10px;
     left: 0;
 }
+
+/*axes style*/
+.xaxis path,
+.xaxis line {
+    stroke: white;
+    fill: none;
+    shape-rendering: crispEdges;
+}
+
+.xaxis text {
+    font-family: sans-serif;
+    font-size: 11px;
+    fill: white;
+}
+
+.yaxis path,
+.yaxis line {
+    stroke: white;
+    fill: none;
+    shape-rendering: crispEdges;
+}
+
+.yaxis text {
+    font-family: sans-serif;
+    font-size: 11px;
+    fill: white;
+}
