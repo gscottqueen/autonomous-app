@@ -14,7 +14,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<!-- Latest compiled and minified d3 script -->
-	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
 
 	<!-- stylesheets -->
 	<link rel="stylesheet" href="externall.css">
@@ -67,13 +67,13 @@
 		];
 
 			//create svg
-					var svg = d3.select("#data").append("svg").attr({width:w,height:h});
+					// var svg = d3.select("#data").append("svg").attr({width:w,height:h});
 					var dataSelection = d3.select("#data");
 
 			// Select the SVG Viewport selection
 		 			var svgContainer = dataSelection.append("svg")
-		       .attr("width",  500)
-		       .attr("height", 500);
+		       .attr("width",  800)
+		       .attr("height", 800);
 
 			//  Draw the Cirlces
 					var circleSelection = svgContainer.append("circle")
@@ -84,8 +84,8 @@
 
 			//  Create the Scale we will use for the Axis
 				var axisScale = d3.scale.linear()
-					.domain([0,100])
-					.range([0,500]);
+					.domain([0,10])
+					.range([0,790]);
 
 			// Create the Axis
 				var xAxis = d3.svg.axis()
