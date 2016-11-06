@@ -99,3 +99,9 @@ nav.sidenav a.icon img{
     font-size: 11px;
     fill: white;
 }
+
+.points {
+  fill: white;
+  stroke: grey;
+  shadow: 4px;
+}
