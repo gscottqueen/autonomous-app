@@ -1,0 +1,16 @@
+/*json Object+String*/
+
+var jsonIncidents = [
+  {
+    "incident_id": 1,
+    "month_id": 1,
+    "day": 15,
+    "description": "Here is a description"
+  }
+  {
+    "incident_id": 1,
+    "month_id": 1,
+    "day": 15,
+    "description": "Here is a description"
+  }
+];

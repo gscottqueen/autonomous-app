@@ -1,10 +1,11 @@
 <html>
+
 <head>
 	<title>Autonomous App</title>
 	<!-- latest jquery -->
-	<script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-		<!-- Latest compiled and minified CSS -->
+	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- Optional theme -->
@@ -16,14 +17,36 @@
 	<!-- Latest compiled and minified d3 script -->
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 
+	<!-- Initiate Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyDmHmOQG_bxclfE4_36GhSSyvWkoI6I-TE",
+			authDomain: "ikey-f27e2.firebaseapp.com",
+			databaseURL: "https://ikey-f27e2.firebaseio.com",
+			storageBucket: "ikey-f27e2.appspot.com",
+			messagingSenderId: "653580928686"
+		};
+		firebase.initializeApp(config);
+	</script>
+
+	<!-- insert external js -->
+	<script src="external.js"></script>
+
+	<!-- Latest LoDash -->
+	<script src="https://cdn.jsdelivr.net/lodash/4.17.2/lodash.min.js"></script>
+
 	<!-- stylesheets -->
 	<link rel="stylesheet" href="externall.css">
 
+
 </head>
+
 <body id="grad">
 	<nav class="sidenav">
 		<a class="icon" href="#"><span title="Source Data"><img src="./icons/SourceData.png" alt="Data Source"></span></a>
-	  <a class="icon" href="#"><span title="About"><img src="./icons/About.png" alt="About"></span></a>
+		<a class="icon" href="#"><span title="About"><img src="./icons/About.png" alt="About"></span></a>
 		<a class="icon" href="#"><span title="Share"><img src="./icons/Share.png" alt="Share"></span></a>
 	</nav>
 	<div class="container-fluid">
@@ -34,11 +57,16 @@
 				</div>
 				<div class="row">
 					<div class="info1 col-md-3">
+						<ul id="incidents">
+
+						</ul>
 						<h3>
 							Test
 						</h3>
 						<p>
-							Industry trends in, <strong>trending industry.</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus.Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.
+							Industry trends in, <strong>trending industry.</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in
+							dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec,
+							posuere nec lacus.Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.
 						</p>
 					</div>
 					<div id="data" class="col-md-9"></div>
@@ -46,93 +74,147 @@
 			</div>
 		</div>
 	</div>
+	<!-- data chart -->
 	<script>
+		//test the variables
 
+		// Object
+		var incident = {
+			icident_id: 1,
+			month_id: 1,
+			day: 15,
+			description: "Here is a description"
+		};
 
-		var incidentsByMonth = [
-		[1,1],
-		[2,2],
-		[3,2],
-		[4,1],
-		[5,1],
-		[6,1],
-		[7,1],
-		[8,1],
-		[9,1],
-		[10,2],
-		[11,2],
-		[12,1],
-		[13,2],
-		[14,2],
-		[15,2],
-		[16,1],
-		[17,1],
-		[18,2],
-		[19,1],
-		[20,2],
-		[21,1],
-		[22,1],
-		[23,2],
-		[24,2],
+		// NOTE:
+		// incident.incident_id  //returns 1
+		// incident.month_id  //returns 1
+		// incident.day  //returns 15
+		// incident.description  //returns Here is a description
+
+		// Object+Array
+		var incidents = [{
+			incident_id: 1,
+			month_id: 1,
+			day: 15,
+			description: "Here is a description",
+		} {
+			incident_id: 2,
+			month_id: 1,
+			day: 17,
+			description: "Here is a description"
+		}];
+
+		// NOTE:
+		// incidents[1].incident_id  //Returns 1
+		// incidents[1].month_id  //Returns 1
+
+		// incidents[2].month_id  //Returns 1
+		// incidents[2].day  //Returns 17
+
+		var dataset = [
+			[incidents[1].month_id, incidents[1].day]
 		];
 
-			//create svg
-					var dataSelection = d3.select("#data");
+		// call the data
+		// d3.json("https://ikey-f27e2.firebaseio.com/incidents.json", function(error, data) {
+		// 	console.log(data); // this is your data
+		// });
+		// d3.json("incidents2.json", function(error, data) {
+		// 	console.log(data); // this is your data
+		// });
 
-			// Create the SVG Viewport selection
-		 			var svgContainer = dataSelection.append("svg")
-		       .attr("width",  800)
-		       .attr("height", 600)
+		//create svg
+		var dataSelection = d3.select("#data");
 
-			//  Create the Scale we will use for the Axis
-				var xAxisScale = d3.scale.linear()
-					.domain([0,24])
-					.range([0,750]);
-				var yAxisScale = d3.scale.linear()
-					.domain([0,3])
-					.range([500,0]);
+		// Create the SVG Viewport selection
+		var svgContainer = dataSelection.append("svg")
+			.attr("width", 800)
+			.attr("height", 600)
 
-			// Create the Axis
-				var xAxis = d3.svg.axis()
-					.scale(xAxisScale)
-					.orient("bottom")
-					.ticks(12);
-				typeof(xAxis)
-				var yAxis = d3.svg.axis()
-					.scale(yAxisScale)
-					.orient("left")
-					.ticks(3);
-				typeof(yAxis)
+		//  Create the Scale we will use for the Axis
+		var xAxisScale = d3.scale.linear()
+			.domain([0, 24])
+			.range([0, 750]);
+		var yAxisScale = d3.scale.linear()
+			.domain([0, 3])
+			.range([500, 0]);
 
-			//Create a group Element for the Axis elements and call the xAxis styles and functions
-				xAxisGroup = svgContainer.append("g")
-					.attr("class","xaxis")
-					.attr("transform", "translate(40,540)")
-					.call(xAxis);
-				yAxisGroup = svgContainer.append("g")
-					.attr("class","yaxis")
-					.attr("transform", "translate(40,40)")
-					.call(yAxis);
+		// Create the Axis
+		var xAxis = d3.svg.axis()
+			.scale(xAxisScale)
+			.orient("bottom")
+			.ticks(12);
+		typeof(xAxis)
+		var yAxis = d3.svg.axis()
+			.scale(yAxisScale)
+			.orient("left")
+			.ticks(3);
+		typeof(yAxis)
 
-			//  Draw the Cirlces
-					var circleSelection = svgContainer.append("circle")
-				svgContainer.selectAll("circle")
-			   .data(incidentsByMonth)
-			   .enter()
-			   .append("circle")
-			   .attr("cx", function(d) {
-			   		return xAxisScale(d[0]);
-			   })
-			   .attr("cy", function(d) {
-			   		return yAxisScale(d[1]);
-			   })
-			   .attr("r", 10)
-				 .attr("class","points")
-				 .attr("transform", "translate(15,40)")
+		//Create a group Element for the Axis elements and call the xAxis styles and functions
+		xAxisGroup = svgContainer.append("g")
+			.attr("class", "xaxis")
+			.attr("transform", "translate(40,540)")
+			.call(xAxis);
+		yAxisGroup = svgContainer.append("g")
+			.attr("class", "yaxis")
+			.attr("transform", "translate(40,40)")
+			.call(yAxis);
+
+		//  Draw the Cirlces
+		var circleSelection = svgContainer.append("circle")
+		svgContainer.selectAll("circle")
+			.data(dataset)
+			.enter()
+			.append("circle")
+			.attr("cx", function(d) {
+				return xAxisScale(d[0]);
+			})
+			.attr("cy", function(d) {
+				return yAxisScale(d[1]);
+			})
+			.attr("r", 10)
+			.attr("class", "points")
+			.attr("transform", "translate(15,40)")
+	</script>
 
 
 
-		</script>
+	<!-- NOTE: add crash data form modal -->
+	<!-- Submit form -->
+	<form class="form-horizontal">
+		<fieldset>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="email">Email</label>
+				<div class="col-md-5">
+					<input id="email" name="email" type="text" placeholder="user@email.com" class="form-control input-md">
+
+				</div>
+			</div>
+
+			<!-- Password input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="password">Password</label>
+				<div class="col-md-5">
+					<input id="password" name="password" type="password" placeholder="" class="form-control input-md">
+
+				</div>
+			</div>
+
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="singlebutton"></label>
+				<div class="col-md-4">
+					<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Login</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
 
 </body>
+
 </html>
