@@ -69,7 +69,7 @@
 							posuere nec lacus.Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.
 						</p>
 					</div>
-					<div id="data" class="col-md-9"></div>
+					<div id="dataSection" class="col-md-9"></div>
 				</div>
 			</div>
 		</div>
@@ -112,28 +112,19 @@
 			description: "Here is a description"
 		}];
 
-		// call in the json
-		// var dataset = [{
+		//define data
+
+		// var data = [{
 		// 	x: incidents[1].month_id,
 		// 	y: incidents[1].day
 		// }];
-		// console.log(dataset);
-
-		// map the months 1-12 to Jan-Dec
-
-		// call the data from api
-		// 
-		// firebase.database().ref('/incidents').once('value').then(function(snapshot) {
-		// 	var dataset = snapshot.val();
-		// 	console.log(incidents);
-		//
-		// });
+		// console.log(data);
 
 		//create svg
-		var dataSelection = d3.select("#data");
+		var dataSection = d3.select("#dataSection");
 
 		// Create the SVG Viewport selection
-		var svgContainer = dataSelection.append("svg")
+		var svgContainer = dataSection.append("svg")
 			.attr("width", 800)
 			.attr("height", 600)
 
@@ -167,9 +158,10 @@
 			.attr("transform", "translate(40,40)")
 			.call(yAxis);
 
+		console.log(dataset);
 		//  Plot the data and draw the Cirlces
 		svgContainer.selectAll("circle")
-			.data(incidents)
+			.data(dataset)
 			.enter()
 			.append("circle")
 			.attr("cx", function(d) {
