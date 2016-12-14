@@ -113,21 +113,21 @@
 		}];
 
 		// call in the json
-		var dataset = [{
-			x: incidents[1].month_id,
-			y: incidents[1].day
-		}];
-		console.log(dataset);
+		// var dataset = [{
+		// 	x: incidents[1].month_id,
+		// 	y: incidents[1].day
+		// }];
+		// console.log(dataset);
 
 		// map the months 1-12 to Jan-Dec
 
 		// call the data from api
-
-		firebase.database().ref('/incidents').once('value').then(function(snapshot) {
-			var dataset = snapshot.val();
-			console.log(incidents);
-
-		});
+		// 
+		// firebase.database().ref('/incidents').once('value').then(function(snapshot) {
+		// 	var dataset = snapshot.val();
+		// 	console.log(incidents);
+		//
+		// });
 
 		//create svg
 		var dataSelection = d3.select("#data");

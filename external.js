@@ -7,10 +7,14 @@ $(document).ready(function(){
     writeData(incident_id, month, day, description)
   })
 
- // firebase.database().ref('/incidents').once('value').then(function(snapshot) {
- //    var dataset = snapshot.val();
- //
- //  });
+ firebase.database().ref('/incidents').once('value').then(function(snapshot) {
+    var dataset = snapshot.val();
+    var dataset = [{
+      x: incidents.month_id,
+      y: incidents.day
+    }];
+    console.log(incidents);
+  });
 
 // on click of submit call the writeData function
 // get the variables from the form
