@@ -18,15 +18,15 @@
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 
 	<!-- Initiate Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 	<script>
 		// Initialize Firebase
 		var config = {
-			apiKey: "AIzaSyDmHmOQG_bxclfE4_36GhSSyvWkoI6I-TE",
-			authDomain: "ikey-f27e2.firebaseapp.com",
-			databaseURL: "https://ikey-f27e2.firebaseio.com",
-			storageBucket: "ikey-f27e2.appspot.com",
-			messagingSenderId: "653580928686"
+			apiKey: "AIzaSyCnGjGAvkcZ7LEMWTqXgLxSbGgSP8V4BoM",
+			authDomain: "autonomous-app.firebaseapp.com",
+			databaseURL: "https://autonomous-app.firebaseio.com",
+			storageBucket: "autonomous-app.appspot.com",
+			messagingSenderId: "610368115071"
 		};
 		firebase.initializeApp(config);
 	</script>
@@ -78,13 +78,20 @@
 	<script>
 		//test the variables
 
+		// Array
+		//
+		// var incidentByMonth = [
+		// 	[1, 2],
+		// 	[2, 4]
+		// ];
+
 		// Object
-		var incident = {
-			icident_id: 1,
-			month_id: 1,
-			day: 15,
-			description: "Here is a description"
-		};
+		// var incident = {
+		// 	incident_id: 1,
+		// 	month_id: 1,
+		// 	day: 15,
+		// 	description: "Here is a description"
+		// };
 
 		// NOTE:
 		// incident.incident_id  //returns 1
@@ -98,31 +105,29 @@
 			month_id: 1,
 			day: 15,
 			description: "Here is a description",
-		} {
+		}, {
 			incident_id: 2,
 			month_id: 1,
-			day: 17,
+			day: 3,
 			description: "Here is a description"
 		}];
 
-		// NOTE:
-		// incidents[1].incident_id  //Returns 1
-		// incidents[1].month_id  //Returns 1
+		// call in the json
+		var dataset = [{
+			x: incidents[1].month_id,
+			y: incidents[1].day
+		}];
+		console.log(dataset);
 
-		// incidents[2].month_id  //Returns 1
-		// incidents[2].day  //Returns 17
+		// map the months 1-12 to Jan-Dec
 
-		var dataset = [
-			[incidents[1].month_id, incidents[1].day]
-		];
+		// call the data from api
 
-		// call the data
-		// d3.json("https://ikey-f27e2.firebaseio.com/incidents.json", function(error, data) {
-		// 	console.log(data); // this is your data
-		// });
-		// d3.json("incidents2.json", function(error, data) {
-		// 	console.log(data); // this is your data
-		// });
+		firebase.database().ref('/incidents').once('value').then(function(snapshot) {
+			var dataset = snapshot.val();
+			console.log(incidents);
+
+		});
 
 		//create svg
 		var dataSelection = d3.select("#data");
@@ -134,10 +139,10 @@
 
 		//  Create the Scale we will use for the Axis
 		var xAxisScale = d3.scale.linear()
-			.domain([0, 24])
+			.domain([0, 12])
 			.range([0, 750]);
 		var yAxisScale = d3.scale.linear()
-			.domain([0, 3])
+			.domain([0, 24])
 			.range([500, 0]);
 
 		// Create the Axis
@@ -162,17 +167,16 @@
 			.attr("transform", "translate(40,40)")
 			.call(yAxis);
 
-		//  Draw the Cirlces
-		var circleSelection = svgContainer.append("circle")
+		//  Plot the data and draw the Cirlces
 		svgContainer.selectAll("circle")
-			.data(dataset)
+			.data(incidents)
 			.enter()
 			.append("circle")
 			.attr("cx", function(d) {
-				return xAxisScale(d[0]);
+				return xAxisScale(d.month_id);
 			})
 			.attr("cy", function(d) {
-				return yAxisScale(d[1]);
+				return yAxisScale(d.day);
 			})
 			.attr("r", 10)
 			.attr("class", "points")
@@ -180,32 +184,31 @@
 	</script>
 
 
-
 	<!-- NOTE: add crash data form modal -->
 	<!-- Submit form -->
-	<form class="form-horizontal">
-		<fieldset>
+	<!-- <form class="form-horizontal">
+		<fieldset> -->
 
-			<!-- Text input-->
-			<div class="form-group">
+	<!-- Text input-->
+	<!-- <div class="form-group">
 				<label class="col-md-4 control-label" for="email">Email</label>
 				<div class="col-md-5">
 					<input id="email" name="email" type="text" placeholder="user@email.com" class="form-control input-md">
 
 				</div>
-			</div>
+			</div> -->
 
-			<!-- Password input-->
-			<div class="form-group">
+	<!-- Password input-->
+	<!-- <div class="form-group">
 				<label class="col-md-4 control-label" for="password">Password</label>
 				<div class="col-md-5">
 					<input id="password" name="password" type="password" placeholder="" class="form-control input-md">
 
 				</div>
-			</div>
+			</div> -->
 
-			<!-- Button -->
-			<div class="form-group">
+	<!-- Button -->
+	<!-- <div class="form-group">
 				<label class="col-md-4 control-label" for="singlebutton"></label>
 				<div class="col-md-4">
 					<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Login</button>
@@ -213,7 +216,7 @@
 			</div>
 
 		</fieldset>
-	</form>
+	</form> -->
 
 </body>
 
