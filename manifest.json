@@ -1,0 +1,7 @@
+{
+  "name": "autonomous-app",
+  "short_name": "atuoapp",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}

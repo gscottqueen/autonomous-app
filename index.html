@@ -121,7 +121,7 @@
 		// console.log(data);
 
 		//create svg
-		var dataSection = d3.select("#dataSection");
+		var dataSection = d3.select("#dataSection")
 
 		// Create the SVG Viewport selection
 		var svgContainer = dataSection.append("svg")
@@ -159,8 +159,11 @@
 			.call(yAxis);
 
 		console.log(dataset);
+
+
 		//  Plot the data and draw the Cirlces
-		svgContainer.selectAll("circle")
+		var renderChart = function(dataset){
+			svgContainer.selectAll("circle")
 			.data(dataset)
 			.enter()
 			.append("circle")
@@ -173,6 +176,7 @@
 			.attr("r", 10)
 			.attr("class", "points")
 			.attr("transform", "translate(15,40)")
+		};
 	</script>
 
 
