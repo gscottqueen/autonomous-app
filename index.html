@@ -15,7 +15,28 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<!-- Latest compiled and minified d3 script -->
-	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+
+	<!-- Initiate Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyCnGjGAvkcZ7LEMWTqXgLxSbGgSP8V4BoM",
+			authDomain: "autonomous-app.firebaseapp.com",
+			databaseURL: "https://autonomous-app.firebaseio.com",
+			storageBucket: "autonomous-app.appspot.com",
+			messagingSenderId: "610368115071"
+		};
+		firebase.initializeApp(config);
+	</script>
+
+	<!-- insert external js -->
+	<script src="external.js"></script>
+
+	<!-- Latest LoDash -->
+	<script src="https://cdn.jsdelivr.net/lodash/4.17.2/lodash.min.js"></script>
 
 	<!-- stylesheets -->
 	<link rel="stylesheet" href="externall.css">
@@ -31,34 +52,140 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="leftgutter col-md-12">
-				<div class="row">
-				</div>
-				<div class="anchorline col-md-12">
-					<h1 class="title">Google Automated Data</h1>
-				</div>
-				<div class="row">
-					<div class="info1 col-md-3">
-						<h3>
+				<<<<<<< HEAD <div class="row">
+			</div>
+			<div class="anchorline col-md-12">
+				<h1 class="title">Google Automated Data</h1>
+			</div>
+			<div class="row">
+				<div class="info1 col-md-3">
+					<h3>
 						Driving Mrs.Autonomous
-					</h3>
-						<p>
-							Industry trends in, <strong>trending industry.</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in
-							dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec,
-							posuere nec lacus.Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.
-						</p>
+					</h3> =======
+					<div class="anchorline col-md-12">
+						<h1 class="title">Autonomous Vehicle Incidents</h1>
 					</div>
-					<div class="data col-md-9">
-						<script type="text/javscript">
-							var h=10; var w=12; var incidentsByMonth = [ {"month":1, "numberOfIncidents":2} {"month":2, "numberOfIncidents":3} {"month":3, "numberOfIncidents":9} {"month":4, "numberOfIncidents":4} {"month":5, "numberOfIncidents":6} {"month":6, "numberOfIncidents":2}
-							{"month":7, "numberOfIncidents":2} {"month":8, "numberOfIncidents":2} {"month":9, "numberOfIncidents":2} {"month":10, "numberOfIncidents":2} {"month":11, "numberOfIncidents":2} {"month":12, "numberOfIncidents":2} ]; //create svg var svg = d3.select("body").append("svg").attr({width:w,height:h});
-							//create placeholder circles var circleMaker=svg.selectAll("circle") .data(incidentsByMonth) .enter() .append("circle"); //give circles attributes .attr({ cx: function(d){return d.month*12}, cy: function(d){return h - d.numberOfIncidents), r:5,
-							"fill":"white";} })
-						</script>
+					<div class="row">
+						<div class="info1 col-md-3">
+							<ul id="incidents">
+							</ul>
+							<h3>
+							Test
+						</h3> >>>>>>> a9f5e15baae5055dd5e60ab40485fd92832c7d81
+							<p>
+								Industry trends in, <strong>trending industry.</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in
+								dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec,
+								posuere nec lacus.Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.
+							</p>
+						</div>
+						<<<<<<< HEAD <div class="data col-md-9">
+							<script type="text/javscript">
+								var h=10; var w=12; var incidentsByMonth = [ {"month":1, "numberOfIncidents":2} {"month":2, "numberOfIncidents":3} {"month":3, "numberOfIncidents":9} {"month":4, "numberOfIncidents":4} {"month":5, "numberOfIncidents":6} {"month":6, "numberOfIncidents":2}
+								{"month":7, "numberOfIncidents":2} {"month":8, "numberOfIncidents":2} {"month":9, "numberOfIncidents":2} {"month":10, "numberOfIncidents":2} {"month":11, "numberOfIncidents":2} {"month":12, "numberOfIncidents":2} ]; //create svg var svg = d3.select("body").append("svg").attr({width:w,height:h});
+								//create placeholder circles var circleMaker=svg.selectAll("circle") .data(incidentsByMonth) .enter() .append("circle"); //give circles attributes .attr({ cx: function(d){return d.month*12}, cy: function(d){return h - d.numberOfIncidents), r:5,
+								"fill":"white";} })
+							</script>
 					</div>
+					=======
+					<div id="dataSection" class="col-md-9"></div>
+					>>>>>>> a9f5e15baae5055dd5e60ab40485fd92832c7d81
 				</div>
 			</div>
 		</div>
 	</div>
+	<<<<<<< HEAD=======< !-- data chart -->
+		<script>
+			//create svg
+			var dataSection = d3.select("#dataSection")
+
+			// Create the SVG Viewport selection
+			var svgContainer = dataSection.append("svg")
+				.attr("width", 900)
+				.attr("height", 600)
+
+			//  Create the Scale we will use for the Axis
+			var xAxisScale = d3.scale.linear()
+				.domain([0, 12])
+				.range([0, 775]);
+			var yAxisScale = d3.scale.linear()
+				.domain([0, 31])
+				.range([500, 0]);
+
+			// Create the Axis
+			var xAxis = d3.svg.axis()
+				.scale(xAxisScale)
+				.orient("bottom")
+				.ticks(12)
+			typeof(xAxis)
+			var yAxis = d3.svg.axis()
+				.scale(yAxisScale)
+				.orient("left")
+				.ticks(3);
+			typeof(yAxis)
+
+			//Create a group Element for the Axis elements and call the xAxis styles and functions
+			xAxisGroup = svgContainer.append("g")
+				.attr("class", "xaxis")
+				.attr("transform", "translate(40,540)")
+				.call(xAxis);
+			yAxisGroup = svgContainer.append("g")
+				.attr("class", "yaxis")
+				.attr("transform", "translate(40,40)")
+				.call(yAxis);
+
+			//  Plot the data and draw the Cirlces
+			var renderChart = function(dataset) {
+				svgContainer.selectAll("circle")
+					.data(dataset)
+					.enter()
+					.append("circle")
+					.attr("cx", function(d) {
+						return xAxisScale(d.monthId);
+					})
+					.attr("cy", function(d) {
+						return yAxisScale(d.day);
+					})
+					.attr("r", 10)
+					.attr("class", "points")
+					.attr("transform", "translate(15,40)")
+			};
+		</script>
+
+		<!-- NOTE: add crash data form modal -->
+		<!-- Submit form -->
+		<!-- <form class="form-horizontal">
+		<fieldset> -->
+
+		<!-- Text input-->
+		<!-- <div class="form-group">
+				<label class="col-md-4 control-label" for="email">Email</label>
+				<div class="col-md-5">
+					<input id="email" name="email" type="text" placeholder="user@email.com" class="form-control input-md">
+
+				</div>
+			</div> -->
+
+		<!-- Password input-->
+		<!-- <div class="form-group">
+				<label class="col-md-4 control-label" for="password">Password</label>
+				<div class="col-md-5">
+					<input id="password" name="password" type="password" placeholder="" class="form-control input-md">
+
+				</div>
+			</div> -->
+
+		<!-- Button -->
+		<!-- <div class="form-group">
+				<label class="col-md-4 control-label" for="singlebutton"></label>
+				<div class="col-md-4">
+					<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Login</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form> -->
+
+		>>>>>>> a9f5e15baae5055dd5e60ab40485fd92832c7d81
 </body>
 
 </html>
