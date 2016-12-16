@@ -19,6 +19,7 @@
 
 	<!-- Initiate Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+
 	<script>
 		// Initialize Firebase
 		var config = {
@@ -40,7 +41,6 @@
 	<!-- stylesheets -->
 	<link rel="stylesheet" href="externall.css">
 
-
 </head>
 
 <body id="grad">
@@ -58,7 +58,6 @@
 				<div class="row">
 					<div class="info1 col-md-3">
 						<ul id="incidents">
-
 						</ul>
 						<h3>
 							Test
@@ -74,73 +73,30 @@
 			</div>
 		</div>
 	</div>
+
 	<!-- data chart -->
 	<script>
-		//test the variables
-
-		// Array
-		//
-		// var incidentByMonth = [
-		// 	[1, 2],
-		// 	[2, 4]
-		// ];
-
-		// Object
-		// var incident = {
-		// 	incident_id: 1,
-		// 	month_id: 1,
-		// 	day: 15,
-		// 	description: "Here is a description"
-		// };
-
-		// NOTE:
-		// incident.incident_id  //returns 1
-		// incident.month_id  //returns 1
-		// incident.day  //returns 15
-		// incident.description  //returns Here is a description
-
-		// Object+Array
-		var incidents = [{
-			incident_id: 1,
-			month_id: 1,
-			day: 15,
-			description: "Here is a description",
-		}, {
-			incident_id: 2,
-			month_id: 1,
-			day: 3,
-			description: "Here is a description"
-		}];
-
-		//define data
-
-		// var data = [{
-		// 	x: incidents[1].month_id,
-		// 	y: incidents[1].day
-		// }];
-		// console.log(data);
-
 		//create svg
 		var dataSection = d3.select("#dataSection")
 
 		// Create the SVG Viewport selection
 		var svgContainer = dataSection.append("svg")
-			.attr("width", 800)
+			.attr("width", 900)
 			.attr("height", 600)
 
 		//  Create the Scale we will use for the Axis
 		var xAxisScale = d3.scale.linear()
 			.domain([0, 12])
-			.range([0, 750]);
+			.range([0, 775]);
 		var yAxisScale = d3.scale.linear()
-			.domain([0, 24])
+			.domain([0, 31])
 			.range([500, 0]);
 
 		// Create the Axis
 		var xAxis = d3.svg.axis()
 			.scale(xAxisScale)
 			.orient("bottom")
-			.ticks(12);
+			.ticks(12)
 		typeof(xAxis)
 		var yAxis = d3.svg.axis()
 			.scale(yAxisScale)
@@ -158,27 +114,23 @@
 			.attr("transform", "translate(40,40)")
 			.call(yAxis);
 
-		console.log(dataset);
-
-
 		//  Plot the data and draw the Cirlces
-		var renderChart = function(dataset){
+		var renderChart = function(dataset) {
 			svgContainer.selectAll("circle")
-			.data(dataset)
-			.enter()
-			.append("circle")
-			.attr("cx", function(d) {
-				return xAxisScale(d.month_id);
-			})
-			.attr("cy", function(d) {
-				return yAxisScale(d.day);
-			})
-			.attr("r", 10)
-			.attr("class", "points")
-			.attr("transform", "translate(15,40)")
+				.data(dataset)
+				.enter()
+				.append("circle")
+				.attr("cx", function(d) {
+					return xAxisScale(d.monthId);
+				})
+				.attr("cy", function(d) {
+					return yAxisScale(d.day);
+				})
+				.attr("r", 10)
+				.attr("class", "points")
+				.attr("transform", "translate(15,40)")
 		};
 	</script>
-
 
 	<!-- NOTE: add crash data form modal -->
 	<!-- Submit form -->

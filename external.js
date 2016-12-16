@@ -7,34 +7,17 @@ $(document).ready(function(){
   //   writeData(incident_id, month, day, description)
   })
 
-  //random shit foundin codepen
-
-
-// call to the database
+//set the global variable
 
 var dataset = [];
 
-// d3.json('/incidents', function(error, json) {
-//   if (error) return console.warn(error);
-//   data = json;
-//   visualizeit();
-// });
-
+// call to the database
 
  var dataset = firebase.database().ref('/incidents').once('value', function(snapshot) {
     dataset = snapshot.val();
-    console.log(dataset);
     renderChart(dataset);
   });
 
-//
-//   var data; // a global
-//
-// d3.json("path/to/file.json", function(error, json) {
-//   if (error) return console.warn(error);
-//   data = json;
-//   visualizeit();
-// });
 
 // on click of submit call the writeData function
 // get the variables from the form

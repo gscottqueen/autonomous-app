@@ -1,13 +1,116 @@
 {
 	"incidents": [{
-		"incident_id": 1,
-		"month_id": 1,
-		"day": 15,
-		"description": "Here is a description"
+		"incidentId": 1,
+		"reporter": "Google",
+		"monthId": 2,
+		"day": 2,
+		"milesDriven": 1452177,
+		"carsOnRoad": 56,
+		"description": "A Google Lexus-model autonomous vehicle (“Google AV”) was traveling in autonomous mode eastbound on El Camino Real in Mountain View in the far right-hand lane approaching the Castro St. intersection. As the Google AV approached the intersection, it signaled its intent to make a right turn on red onto Castro St. The Google AV then moved to the right-hand side of the lane to pass traffic in the same lane that was stopped at the intersection and proceeding straight. However, the Google AV had to come to a stop and go around sandbags positioned around a storm drain that were blocking its path. When the light turned green, traffic in the lane continued past the Google AV. After a few cars had passed, the Google AV began to proceed back into the center of the lane to pass the sand bags. A public transit bus was approaching from behind. The Google AV test driver saw the bus approaching in the left side mirror but believed the bus would stop or slow to allow the Google AV to continue. Approximately three seconds later, as the Google AV was reentering the center of the lane it made contact with the side of the bus. The Google AV was operating in autonomous mode and traveling at less than 2 mph, and the bus was travelling at about 15 mph at the time of contact. The Google AV sustained body damage to the left front fender, the left front wheel and one of its driver’s-side sensors. There were no injuries reported at the scene."
 	}, {
-		"incident_id": 2,
-		"month_id": 1,
+		"incidentId": 1,
+		"reporter": "Google",
+		"monthId": 3,
+		"day": 14,
+		"milesDriven": 1498214,
+		"carsOnRoad": 54,
+		"description": "​A Google Lexus-model autonomous vehicle (“Google AV”) travelling westbound on W. Anderson Ln. in Austin, TX in autonomous mode was rear-ended while stopped at a traffic light. The Google AV was stopped for approximately 3 seconds behind traffic waiting at a red light at Burnet Road, when a vehicle (Volkswagen Passat) approaching from behind collided with the rear bumper of the Google AV. The Google AV’s speed at the time of the collision was 0 mph. The other vehicle’s approximate speed at the time of the collision was 10 mph."
+	}, {
+		"incidentId": 4,
+		"reporter": "Google",
+		"monthId": 4,
+		"day": 24,
+		"milesDriven": 1564981,
+		"carsOnRoad": 57,
+		"description": "A Google self-driving prototype vehicle travelling westbound in autonomous mode on Nita Avenue in Palo Alto was involved in an accident. The prototype vehicle came to a stop at the intersection of San Antonio Road, then, prior to making a right turn on San Antonio Road, began to gradually advance forward in order to get a better view of traffic approaching from the left on San Antonio Road. When the prototype vehicle stopped in order to yield to traffic approaching from the left on San Antonio Road, a vehicle approaching at approximately 9 mph from behind the prototype collided with the rear bumper of the prototype vehicle. There were no injuries reported by either party at the scene. Both vehicles sustained minor damage."
+	}, {
+		"incidentId": 5,
+		"reporter": "Google",
+		"monthId": 4,
+		"day": 7,
+		"milesDriven": 1564981,
+		"carsOnRoad": 57,
+		"description": "A Google Lexus model self-driving vehicle was travelling southbound on Bryant St. in Palo Alto in autonomous mode and was stopped behind traffic at the red light intersection of Oregon Expwy. A vehicle attempting to pass on the right shoulder very slightly contacted the self-driving vehicle. The other vehicle’s side mirror grazed the passenger side of the Google self-driving vehicle. There were no injuries reported at the scene by either party. The Google self-driving car sustained no damage and the other vehicle’s left side-view mirror was slightly folded in."
+	}, {
+		"incidentId": 6,
+		"reporter": "Google",
+		"monthId": 5,
+		"day": 4,
+		"milesDriven": 1644154,
+		"carsOnRoad": 58,
+		"description": "A Google self-driving prototype vehicle in manual mode and proceeding west on Latham St. in Mountain View struck a median while travelling at 9 mph near the intersection of Chiquita Ave. There were no other vehicles involved and no traffic in the vicinity. There were no injuries. The Google AV sustained minor damage."
+	}, {
+		"incidentId": 7,
+		"reporter": "Google",
+		"monthId": 6,
 		"day": 15,
-		"description": "Here is a description"
+		"milesDriven": 1725911,
+		"carsOnRoad": 58,
+		"description": "A Google prototype autonomous vehicle (Google AV) traveling Northbound in autonomous mode on Berkman Dr. in Austin, TX was rear-ended. The Google AV was stopped at a red light at E 51st Street for around one minute when the vehicle immediately behind the Google AV rolled forward and collided with the Google AV. The speed of the other vehicle at the time of the collision was approximately 3 mph. The Google AV sustained a minor scrape on its rear bumper. There was no visible damage to the other vehicle. There were no injuries reported at the scene."
+	}, {
+		"incidentId": 8,
+		"reporter": "Google",
+		"monthId": 6,
+		"day": 6,
+		"milesDriven": 1725911,
+		"carsOnRoad": 58,
+		"description": "A Google prototype autonomous vehicle (Google AV) was traveling southbound on Berkman Dr. in Austin, TX in autonomous mode and was involved in a minor collision north of E 51st St. The other vehicle was approaching the Google AV from behind in an adjacent right turn-only lane. The other vehicle then crossed into the lane occupied by the Google AV and made slight contact with the side of our vehicle. The Google AV sustained a small scrape to the front right fender and the other vehicle had a scrape on its left rear quarter panel. There were no injuries reported at the scene."
+	}, {
+		"incidentId": 9,
+		"reporter": "Google",
+		"monthId": 7,
+		"day": 15,
+		"milesDriven": 1842496,
+		"carsOnRoad": 58,
+		"description": "A Google prototype autonomous vehicle (“Google AV”) operating in autonomous mode traveling westbound on Cuesta Dr. in Los Altos, CA was rear ended. The Google AV was stopped at the stop sign at the intersection of Cuesta Dr. and Springer Rd. when a vehicle approaching from behind in the same lane collided with the Google AV. The other vehicle was traveling at approximately 7 mph when it struck the Google AV. The Google AV sustained minor damage to its rear hatch and rear sensor. There were no injuries reported at the scene."
+	}, {
+		"incidentId": 10,
+		"reporter": "Google",
+		"monthId": 8,
+		"day": 22,
+		"milesDriven": 1969078,
+		"carsOnRoad": 58,
+		"description": "A Google Lexus-model autonomous vehicle traveling northbound in autonomous mode on Desert Breeze Rd. in Chandler, AZ was rear-ended. The Google vehicle was stopped at a red light at the intersection of Ray Rd. and yielding to cross traÕc before it could make a right turn. A vehicle approaching from behind the Google vehicle at approximately 7 mph collided with the rear bumper of the Google vehicle. The Google vehicle experienced moderate damage to its rear bumper. The other vehicle experienced mild damage to its front bumper. No injuries were reported by the parties at the scene."
+	}, {
+		"incidentId": 11,
+		"reporter": "Google",
+		"monthId": 8,
+		"day": 16,
+		"milesDriven": 1969078,
+		"carsOnRoad": 58,
+		"description": "A Google prototype vehicle travelling southeastbound on Phyllis Ave. in Mountain View in autonomous mode was involved in an accident. In preparation for making a right turn onto Grant Rd., the Google vehicle entered the right-turn slip lane and advanced forward at 6 mph to gain a better view of traffic traveling southbound on Grant Rd. As the Google vehicle moved forward, it detected a vehicle approaching southbound on Grant Rd. and came to a stop to yield to that vehicle. Approximately one second later, a vehicle approaching from behind the Google vehicle at approximately 5 mph collided with the rear bumper of the Google vehicle. The Google vehicle experienced moderate damage to its rear bumper and hatch. The other vehicle experienced mild damage to its front bumper. No injuries were reported by the parties at the scene."
+	},
+	{
+	 "incidentId": 12,
+	 "reporter": "Google",
+	 "monthId": 9,
+	 "day": 23,
+	 "milesDriven": 2102047,
+	 "carsOnRoad": 58,
+	 "description": "A Google Lexus-model autonomous vehicle (“Google AV”) traveling northbound in manual mode on Calderon Ave. in Mountain View was involved in an accident. As the Google AV began to make a right turn onto Dana St. in autonomous mode, two pedestrians walking northbound on the sidewalk on Calderon Ave. approached the entrance to the crosswalk across Dana St. The Google AV test driver disengaged the autonomous technology and began to bring the Google AV to a stop in order to yield to the pedestrians entering the crosswalk. A vehicle immediately behind the Google AV traveling at 4.5 mph collided with the rear bumper of the Google AV. The Google AV sustained minor damage to its rear bumper. The other vehicle sustained minor damage to its front bumper. There were no injuries reported at the scene by either party"
+ },{
+	"incidentId": 13,
+	"reporter": "Google",
+	"monthId": 9,
+	"day": 20,
+	"milesDriven": 2102047,
+	"carsOnRoad": 58,
+	"description": "A Google Lexus-model autonomous vehicle (“Google AV”) traveling northbound in manual mode on Calderon Ave. in Mountain View was involved in an accident. As the Google AV began to make a right turn onto Dana St. in autonomous mode, two pedestrians walking northbound on the sidewalk on Calderon Ave. approached the entrance to the crosswalk across Google AV to a stop in order to yield to the pedestrians entering the crosswalk. A vehicle immediately behind the Google AV traveling at 4.5 mph collided with the rear bumper of the Google AV. The Google AV sustained minor damage to its rear bumper. The other vehicle sustained minor damage to its front bumper. There were no injuries reported at the scene by either party"
+},{
+	"incidentId": 14,
+	"reporter": "Google",
+	"monthId": 9,
+	"day": 14,
+	"milesDriven": 2102047,
+	"carsOnRoad": 58,
+	"description": " A Google prototype vehicle (“Google AV”) traveling eastbound in manual mode on El Camino Real in Los Altos was involved in an accident. As the Google AV was completing a lane change in autonomous mode from the far right lane to the middle lane of El Camino Real near the intersection of Showers Drive, a car stopped in traÕc in the far left lane of El Camino Real abruptly changed lanes into the middle lane, immediately in front of the Google AV. The Google AV test driver took manual control of the Google AV and quickly merged back into the far right lane to avoid the vehicle. Another vehicle approaching from behind in the right lane of El Camino Real then struck the rear passenger side quarter panel of the Google AV at approximately 23 mph. The Google AV was travelling at approximately 14 mph at the time of the collision. The Google AV sustained minor damage to its rear passenger-side tire, quarter panel, and door. The other vehicle sustained parties at the scene."
+},{
+ "incidentId": 15,
+ "reporter": "Google",
+ "monthId": 9,
+ "day": 7,
+ "milesDriven": 2102047,
+ "carsOnRoad": 58,
+ "description": " A Google prototype autonomous vehicle (“Google AV”) proceeding westbound in autonomous mode on Nita Avenue in Palo Alto was involved in an accident. The Google AV came to a stop at the intersection of San Antonio Road, then, in preparation for making a right turn on San Antonio Road, began to gradually advance forward in order to gain a better view of cross-traÕc. A 12-passenger shuttle van waiting immediately behind the Google AV then advanced forward at approximately 7 mph and collided with the rear bumper of the Google AV. The Google AV was travelling at approximately 3 mph at the time of the collision. The Google AV experienced minor damage to its rear bumper and hatch. The other vehicle experienced minor damage to its front bumper and right headlight. There were no injuries reported at the scene by either party.."
 	}]
 }
