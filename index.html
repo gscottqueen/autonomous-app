@@ -56,28 +56,26 @@
 					Title of the App
 				</div>
 				<div class="info1 col-md-3">
-					<h3 id="reporter">
+					<h3 class="reporter">
 
 						<!-- use incidents:reporter to display reporter in h3 -->
 
-							Reporter | <span id="reporter">Google</span>
+							Reporter: <span id="reporter"></span>
 						</h3>
 
 					<!-- use incidents: monthId and incidents: day to display month and day with a , inbetween -->
 
 					<p class="details">
-						Date | <span id="monthDay">1.15.2016</span>
+						Date: <span class="month"></span><span class="day"></span><span class="year"></span>
 					</p>
 
 					<!-- use incidents: milesDriven to display the number of miles driven that month -->
 					<p class="details">
-						Total Miles Autnomously Driven | <span id="miles">156491</span>
+						Total Miles Autnomously Driven: <span class="miles"></span>
 					</p>
 
+					<h4> Incident Report:</h4>
 					<p id="description" class="description">
-						Industry trends in, <strong>trending industry.</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor.
-						Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere
-						nec lacus.Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.
 					</p>
 				</div>
 				<div class="data col-md-9">
@@ -148,18 +146,20 @@
 				.attr("class", "points")
 				.attr("transform", "translate(15,40)")
 				.on("mouseover", function(d) {
-					div.transition()
-							.duration(200)
-							.style("opacity", .9);
-					div	.html(d.day + "<br/>"  + d.milesDriven)
-							.style("left", (d3.event.pageX) + "px")
-							.style("top", (d3.event.pageY - 28) + "px");
+					div	.html()
+						$("#reporter").html(d.reporter)
+						$("year").html(d.year)
+						$(".month").html(d.monthId)
+						$(".day").append("tet").html(d.day)
+						$(".miles").html(d.milesDriven)
+						$(".description").html(d.description)
 					})
-			.on("mouseout", function(d) {
-					div.transition()
-							.duration(500)
-							.style("opacity", 0);
-			});
+
+					.on("mouseout", function(d) {
+				            div.transition()
+				                .duration(500)
+				                .style("opacity", 0);
+			})
 		};
 
 	</script>
