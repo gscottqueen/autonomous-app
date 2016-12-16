@@ -20,8 +20,8 @@
 	<!-- Initiate Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 
+	<!-- Initialize Firebase -->
 	<script>
-		// Initialize Firebase
 		var config = {
 			apiKey: "AIzaSyCnGjGAvkcZ7LEMWTqXgLxSbGgSP8V4BoM",
 			authDomain: "autonomous-app.firebaseapp.com",
@@ -55,13 +55,10 @@
 				<div class="row">
 				</div>
 				<div class="anchorline col-md-12">
-					<h1 class="title">Google Automated Data</h1>
+					<h1 class="title">Autonomous Incident Data</h1>
 				</div>
 				<div class="row">
 					<div class="info1 col-md-3">
-						<div class="anchorline col-md-12">
-							<h1 class="title">Autonomous Vehicle Incidents</h1>
-						</div>
 						<div class="row">
 							<div class="info1 col-md-3">
 								<ul id="incidents">
@@ -76,12 +73,6 @@
 								</p>
 							</div>
 							<div class="data col-md-9">
-								<script type="text/javscript">
-									var h=10; var w=12; var incidentsByMonth = [ {"month":1, "numberOfIncidents":2} {"month":2, "numberOfIncidents":3} {"month":3, "numberOfIncidents":9} {"month":4, "numberOfIncidents":4} {"month":5, "numberOfIncidents":6} {"month":6, "numberOfIncidents":2}
-									{"month":7, "numberOfIncidents":2} {"month":8, "numberOfIncidents":2} {"month":9, "numberOfIncidents":2} {"month":10, "numberOfIncidents":2} {"month":11, "numberOfIncidents":2} {"month":12, "numberOfIncidents":2} ]; //create svg var svg = d3.select("body").append("svg").attr({width:w,height:h});
-									//create placeholder circles var circleMaker=svg.selectAll("circle") .data(incidentsByMonth) .enter() .append("circle"); //give circles attributes .attr({ cx: function(d){return d.month*12}, cy: function(d){return h - d.numberOfIncidents), r:5,
-									"fill":"white";} })
-								</script>
 							</div>
 							<div id="dataSection" class="col-md-9"></div>
 
