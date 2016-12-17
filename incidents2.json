@@ -2,6 +2,7 @@
 	"incidents": [{
 		"incidentId": 1,
 		"reporter": "Google",
+	  "year": 2016,
 		"monthId": 2,
 		"day": 2,
 		"milesDriven": 1452177,
@@ -10,6 +11,7 @@
 	}, {
 		"incidentId": 1,
 		"reporter": "Google",
+		"year": 2016,
 		"monthId": 3,
 		"day": 14,
 		"milesDriven": 1498214,
@@ -18,6 +20,7 @@
 	}, {
 		"incidentId": 4,
 		"reporter": "Google",
+		"year": 2016,
 		"monthId": 4,
 		"day": 24,
 		"milesDriven": 1564981,
@@ -26,6 +29,7 @@
 	}, {
 		"incidentId": 5,
 		"reporter": "Google",
+		"year": 2016,
 		"monthId": 4,
 		"day": 7,
 		"milesDriven": 1564981,
@@ -34,6 +38,7 @@
 	}, {
 		"incidentId": 6,
 		"reporter": "Google",
+		"year": 2016,
 		"monthId": 5,
 		"day": 4,
 		"milesDriven": 1644154,
@@ -50,6 +55,7 @@
 	}, {
 		"incidentId": 8,
 		"reporter": "Google",
+		"year": 2016,
 		"monthId": 6,
 		"day": 6,
 		"milesDriven": 1725911,
@@ -58,6 +64,7 @@
 	}, {
 		"incidentId": 9,
 		"reporter": "Google",
+		"year": 2016,
 		"monthId": 7,
 		"day": 15,
 		"milesDriven": 1842496,
@@ -66,6 +73,7 @@
 	}, {
 		"incidentId": 10,
 		"reporter": "Google",
+		"year": 2016,
 		"monthId": 8,
 		"day": 22,
 		"milesDriven": 1969078,
@@ -74,6 +82,7 @@
 	}, {
 		"incidentId": 11,
 		"reporter": "Google",
+		"year": 2016,
 		"monthId": 8,
 		"day": 16,
 		"milesDriven": 1969078,
@@ -83,6 +92,7 @@
 	{
 	 "incidentId": 12,
 	 "reporter": "Google",
+	 "year": 2016,
 	 "monthId": 9,
 	 "day": 23,
 	 "milesDriven": 2102047,
@@ -91,6 +101,7 @@
  },{
 	"incidentId": 13,
 	"reporter": "Google",
+	"year": 2016,
 	"monthId": 9,
 	"day": 20,
 	"milesDriven": 2102047,
@@ -99,6 +110,7 @@
 },{
 	"incidentId": 14,
 	"reporter": "Google",
+	"year": 2016,
 	"monthId": 9,
 	"day": 14,
 	"milesDriven": 2102047,
@@ -107,6 +119,7 @@
 },{
  "incidentId": 15,
  "reporter": "Google",
+ "year": 2016,
  "monthId": 9,
  "day": 7,
  "milesDriven": 2102047,

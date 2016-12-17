@@ -66,7 +66,7 @@
 							Reporter: <span id="reporter">Manufacture</span>
 						</h3>
 					<p class="details">
-						Date: <span class="month">MM</span><span class="day">DD.</span><span class="year">YYYY</span>
+						Date: <span class="month">MM</span>.<span class="day">DD</span>.<span class="year">YYYY</span>
 					</p>
 					<p class="details">
 						Total Autonomous Driven Miles: <span class="miles">0</span>
@@ -186,11 +186,6 @@
 	</div>
 	</div>
 	<script>
-		// tool tip roll over in menu
-		$(document).ready(function() {
-			$('[data-toggle="tooltip"]').tooltip();
-		});
-
 		// modal date selector
 		$(function() {
 			$('#datetimepicker9').datetimepicker({
@@ -209,7 +204,7 @@
 		//  Create the Scale we will use for the Axis
 		var xAxisScale = d3.scale.linear()
 			.domain([0, 12])
-			.range([0, 950]);
+			.range([0, 875]);
 		var yAxisScale = d3.scale.linear()
 			.domain([0, 31])
 			.range([500, 0]);
@@ -257,7 +252,7 @@
 				.on("mouseover", function(d) {
 					div.html()
 					$("#reporter").html(d.reporter)
-					$("year").html(d.year)
+					$(".year").html(d.year)
 					$(".month").html(d.monthId)
 					$(".day").append("tet").html(d.day)
 					$(".miles").html(d.milesDriven)
