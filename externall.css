@@ -14,8 +14,23 @@ body {
 }
 
 h1 {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-weight: 700;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+.formRight{
+  float: right;
+  position: 35px;
+  padding-left: 35px;
 }
 
 h4 {
@@ -45,7 +60,7 @@ nav.sidenav {
     margin-right: 10px;
 }
 
-nav .title{
+nav .nav{
   background: black;
   color: white;
   margin-top: 15px;
@@ -64,6 +79,19 @@ nav .title{
 .title {
     color: white;
     text-align: right;
+    margin-right: 25px;
+    border-bottom: 10px;
+    border-bottom-color: white;
+    border-bottom: solid;
+    padding-bottom: 15px;
+    margin-left: 15px;
+    padding-bottom: 0px;
+}
+
+a.car img{
+  width: 250px;
+  margin-top: 25px;
+  margin-left: 25px;
 }
 
 nav.sidenav a.icon img {

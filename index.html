@@ -48,7 +48,7 @@
 
 <body id="grad">
 	<nav class="sidenav">
-		<a class="icon title" href="#" title="API Source Data on google.firebse.io">BUILT WITH</a>
+		<a class="icon nav" href="#" title="API Source Data on google.firebse.io">BUILT WITH</a>
 		<a class="icon" href="#" title="API Source Data on google.firebse.io"><img src="./icons/firebase.png" alt="Data Source"></a>
 		<a class="icon" href="#"><span title="Data Driven Documents Framework"><img src="./icons/d3.png" alt="About"></span></a>
 		<a class="icon" href="#"><span title="Built with Jquery"><img src="./icons/jquery.png" alt="Share"></span></a>
@@ -57,37 +57,69 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="leftgutter col-md-12">
-				<div class="row">
-					Title of the App
+				<div class="row title">
+					<h1>Autonomous Incident Data</h1>
+				</div>
+				<div class="heroimage">
 				</div>
 				<div class="info1 col-md-3">
+					<a class="car" href="#" title="Google Lexus"><img src="./cars/rx450h.png" alt="Lexus self driving car"></a>
 					<h3 class="reporter">
-
-						<!-- use incidents:reporter to display reporter in h3 -->
-
-							Reporter: <span id="reporter"></span>
+							Reporter: <span id="reporter">Manufacture</span>
 						</h3>
-
-					<!-- use incidents: monthId and incidents: day to display month and day with a , inbetween -->
-
-					<p class="details">
-						Date: <span class="month"></span><span class="day"></span><span class="year"></span>
-					</p>
-
-					<!-- use incidents: milesDriven to display the number of miles driven that month -->
-					<p class="details">
-						Total Miles Autnomously Driven: <span class="miles"></span>
-					</p>
-
-					<h4> Incident Report:</h4>
-					<p id="description" class="description">This chart is a scatterplot using <a href="https://d3js.org/">data driven documents (d3)</a> with an open source api located at <a href="https://autonomous-app.firebaseio.com/">
-						autonomous-app.firebaseio.com</a> and represents traffic incidents reported by autonomous vehicle developers and owners.  To see details of the reported incidents roll over each point on the chart.
-					</p>
+						<p class="details">
+						Date: <span class="month">MM</span><span class="day">DD.</span><span class="year">YYYY</span>
+						</p>
+						<p class="details">
+						Total Autonomous Driven Miles: <span class="miles">0</span>
+						</p>
+						<h4> Incident Report:</h4>
+						<p id="description" class="description">This chart is a scatterplot using <a href="https://d3js.org/">data driven documents (d3)</a> with an open source API located at <a href="https://autonomous-app.firebaseio.com/">
+						autonomous-app.firebaseio.com</a> and represents traffic incidents reported by autonomous vehicle manufacturers and owners.  To see details of the reported incidents, mouseover each point on the chart.
+						</p>
 				</div>
-				<div class="data col-md-9">
+				<div id="dataSection" class="col-md-9">
 				</div>
-				<div id="dataSection" class="col-md-9"></div>
+				<div class="col-md-6">
+				</div>
+				<div class="formRight col-md-6">
 
+					<h2 class="">Submit an incident:</h2>
+					<!-- NOTE: add crash data form modal -->
+					<!-- Submit form -->
+					<!-- <form class="form-horizontal">
+						<fieldset> -->
+
+					<!-- Text input-->
+					<div class="form-group">
+								<label class="col-md-4 control-label" for="email">Email</label>
+								<div class="col-md-5">
+									<input id="email" name="email" type="text" placeholder="user@email.com" class="form-control input-md">
+
+								</div>
+							</div>
+
+					<!-- Password input-->
+					<div class="form-group">
+								<label class="col-md-4 control-label" for="password">Password</label>
+								<div class="col-md-5">
+									<input id="password" name="password" type="password" placeholder="" class="form-control input-md">
+
+								</div>
+							</div>
+
+					<!-- Button -->
+					<div class="form-group">
+								<label class="col-md-4 control-label" for="singlebutton"></label>
+								<div class="col-md-4">
+									<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Login</button>
+								</div>
+							</div>
+
+						</fieldset>
+					</form>
+				</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -104,13 +136,13 @@
 
 		// Create the SVG Viewport selection
 		var svgContainer = dataSection.append("svg")
-			.attr("width", 900)
-			.attr("height", 600)
+			.attr("width", 999)
+			.attr("height", 575)
 
 		//  Create the Scale we will use for the Axis
 		var xAxisScale = d3.scale.linear()
 			.domain([0, 12])
-			.range([0, 775]);
+			.range([0, 950]);
 		var yAxisScale = d3.scale.linear()
 			.domain([0, 31])
 			.range([500, 0]);
@@ -139,8 +171,6 @@
 
 		// Define the div for the tooltip
 		var div = d3.select("#dataSection").append("div")
-    	.attr("class", "tooltip")
-    	.style("opacity", 0);
 
 		//  Plot the data and draw the Cirlces
 		var renderChart = function(dataset) {
@@ -169,42 +199,6 @@
 		};
 
 	</script>
-
-	<!-- all clean -->
-
-	<!-- NOTE: add crash data form modal -->
-	<!-- Submit form -->
-	<!-- <form class="form-horizontal">
-		<fieldset> -->
-
-	<!-- Text input-->
-	<!-- <div class="form-group">
-				<label class="col-md-4 control-label" for="email">Email</label>
-				<div class="col-md-5">
-					<input id="email" name="email" type="text" placeholder="user@email.com" class="form-control input-md">
-
-				</div>
-			</div> -->
-
-	<!-- Password input-->
-	<!-- <div class="form-group">
-				<label class="col-md-4 control-label" for="password">Password</label>
-				<div class="col-md-5">
-					<input id="password" name="password" type="password" placeholder="" class="form-control input-md">
-
-				</div>
-			</div> -->
-
-	<!-- Button -->
-	<!-- <div class="form-group">
-				<label class="col-md-4 control-label" for="singlebutton"></label>
-				<div class="col-md-4">
-					<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Login</button>
-				</div>
-			</div>
-
-		</fieldset>
-	</form> -->
 </body>
 
 </html>
