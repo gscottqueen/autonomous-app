@@ -14,37 +14,37 @@ body {
 }
 
 h1 {
-  margin-bottom: 15px;
-  font-weight: 700;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
 }
 
 h2 {
-  margin-bottom: 15px;
-  font-weight: 700;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
 }
 
-.formRight{
-  float: right;
-  position: 35px;
-  padding-left: 35px;
+.formRight {
+    float: right;
+    position: 35px;
+    padding-left: 35px;
 }
 
 h4 {
-  margin-top: 25px;
-  font-weight: bold;
+    margin-top: 25px;
+    font-weight: bold;
 }
 
 a {
-  color: black;
-  font-weight: bold;
+    color: black;
+    font-weight: bold;
 }
 
 #reporter {
-  color: white;
+    color: white;
 }
 
 nav.sidenav a {
@@ -60,16 +60,16 @@ nav.sidenav {
     margin-right: 10px;
 }
 
-nav .nav{
-  background: black;
-  color: white;
-  margin-top: 15px;
-  padding-left: 5px;
-  padding-right: 5px;
+nav .nav {
+    background: black;
+    color: white;
+    margin-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-.icon img{
-  margin: 20px 10px 10px 15px;
+.icon img {
+    margin: 20px 10px 10px 15px;
 }
 
 .anchorline {
@@ -88,14 +88,27 @@ nav .nav{
     padding-bottom: 0px;
 }
 
-a.car img{
-  width: 250px;
-  margin-top: 25px;
-  margin-left: 25px;
+a.car img {
+    width: 250px;
+    margin-top: 25px;
+    margin-left: 25px;
 }
 
 nav.sidenav a.icon img {
     width: 55px;
+}
+
+button.orange {
+    color: white;
+    background: orange;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    padding-right: 12px;
 }
 
 #chart {

@@ -60,76 +60,143 @@
 				<div class="row title">
 					<h1>Autonomous Incident Data</h1>
 				</div>
-				<div class="heroimage">
-				</div>
 				<div class="info1 col-md-3">
-							<a class="icon car" href="#"><span title="Lexus self driving car"><img src="./Cars/rx450h.png" alt="Lexus self driving car"></span></a>
+					<a class="icon car" href="#"><span title="Lexus self driving car"><img src="./Cars/rx450h.png" alt="Lexus self driving car"></span></a>
 					<h3 class="reporter">
 							Reporter: <span id="reporter">Manufacture</span>
 						</h3>
-						<p class="details">
+					<p class="details">
 						Date: <span class="month">MM</span><span class="day">DD.</span><span class="year">YYYY</span>
-						</p>
-						<p class="details">
+					</p>
+					<p class="details">
 						Total Autonomous Driven Miles: <span class="miles">0</span>
-						</p>
-						<h4> Incident Report:</h4>
-						<p id="description" class="description">This chart is a scatterplot using <a href="https://d3js.org/">data driven documents (d3)</a> with an open source API located at <a href="https://autonomous-app.firebaseio.com/">
-						autonomous-app.firebaseio.com</a> and represents traffic incidents reported by autonomous vehicle manufacturers and owners.  To see details of the reported incidents, mouseover each point on the chart.
-						</p>
+					</p>
+					<h4> Incident Report:</h4>
+					<p id="description" class="description">This chart is a scatterplot using <a href="https://d3js.org/">data driven documents (d3)</a> with an open source API located at <a href="https://autonomous-app.firebaseio.com/">
+						autonomous-app.firebaseio.com</a> and represents traffic incidents reported by autonomous vehicle manufacturers and owners. To see details of the reported incidents, mouseover each point on the chart.
+					</p>
 				</div>
 				<div id="dataSection" class="col-md-9">
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-9">
 				</div>
-				<div class="formRight col-md-6">
+				<div class="formRight col-md-2">
 
-					<h2 class="">Submit an incident:</h2>
-					<!-- NOTE: add crash data form modal -->
-					<!-- Submit form -->
-					<!-- <form class="form-horizontal">
-						<fieldset> -->
+					<!-- Button trigger modal -->
+					<a><button type="button" class="orange" data-toggle="modal" data-target="#myModal"> Report an Incident >
+					</button></a>
 
-					<!-- Text input-->
-					<div class="form-group">
-								<label class="col-md-4 control-label" for="email">Email</label>
-								<div class="col-md-5">
-									<input id="email" name="email" type="text" placeholder="user@email.com" class="form-control input-md">
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<form class="form-horizontal">
+										<fieldset>
 
+											<!-- Form Name -->
+											<legend>Incident Report</legend>
+
+											<!-- Text input-->
+											<div class="form-group">
+												<label class="col-md-4 control-label" for="textinput">Name</label>
+												<div class="col-md-5">
+													<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+
+												</div>
+											</div>
+
+											<!-- Multiple Checkboxes -->
+											<div class="form-group">
+												<label class="col-md-4 control-label" for="checkbox"></label>
+												<div class="col-md-5">
+													<div class="checkbox">
+														<label for="checkbox-0">
+      												<input type="checkbox" name="checkbox" id="checkbox-0" value="1">Keep me anonymous
+    													</label>
+													</div>
+												</div>
+											</div>
+
+											<!-- Email input-->
+											<div class="form-group">
+												<label class="col-md-4 control-label" for="textinput">Email</label>
+												<div class="col-md-5">
+													<input id="textinput" name="textinput" type="text" placeholder="user@mail.com" class="form-control input-md">
+
+												</div>
+											</div>
+
+											<!-- Select Basic -->
+											<div class="form-group">
+												<label class="col-md-4 control-label" for="selectbasic">Manufacturer</label>
+												<div class="col-md-5">
+													<select id="selectbasic" name="selectbasic" class="form-control">
+      											<option value="1">Google</option>
+      											<option value="2">Tesla</option>
+      											<option value="3">Other</option>
+    											</select>
+												</div>
+											</div>
+
+											<!-- Textarea -->
+											<div class="form-group">
+												<label class="col-md-4 control-label" for="textarea">Details</label>
+												<div class="col-md-5">
+													<textarea class="form-control" id="textarea" name="textarea">Enter a detailed description of the incident.</textarea>
+												</div>
+											</div>
+
+											<!-- date time picker -->
+											<div class="form-group">
+												<label class="col-md-4 control-label" for="password">Date</label>
+												<div class="col-sm-5">
+													<div class='input-group date' id='datetimepicker9'>
+														<input type='text' class="form-control" placeholder="MM/DD/YYYY" />
+														<span class="input-group-addon">
+                    					<span class="glyphicon glyphicon-calendar">
+                    					</span>
+														</span>
+													</div>
+												</div>
+
+										</fieldset>
+									</form>
+
+									<div class="modal-footer">
+
+										<!-- Button -->
+
+										<label class="col-md-4 control-label" for="singlebutton"></label>
+										<div class="col-md-4">
+											<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Submit</button>
+										</div>
+									</div>
+									</div>
+									</fieldset>
+									</form>
 								</div>
 							</div>
-
-					<!-- Password input-->
-					<div class="form-group">
-								<label class="col-md-4 control-label" for="password">Password</label>
-								<div class="col-md-5">
-									<input id="password" name="password" type="password" placeholder="" class="form-control input-md">
-
-								</div>
-							</div>
-
-					<!-- Button -->
-					<div class="form-group">
-								<label class="col-md-4 control-label" for="singlebutton"></label>
-								<div class="col-md-4">
-									<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Login</button>
-								</div>
-							</div>
-
-						</fieldset>
-					</form>
-				</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	</div>
+	</div>
 	<script>
+		// tool tip roll over in menu
+		$(document).ready(function() {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
 
-	// tool tip roll over in menu
-	  $(document).ready(function(){
-	      $('[data-toggle="tooltip"]').tooltip();
-	  });
+		// modal date selector
+		$(function() {
+			$('#datetimepicker9').datetimepicker({
+				viewMode: 'years'
+			});
+		});
 
 		//create svg
 		var dataSection = d3.select("#dataSection")
@@ -188,17 +255,17 @@
 				.attr("class", "points")
 				.attr("transform", "translate(15,40)")
 				.on("mouseover", function(d) {
-					div	.html()
-						$("#reporter").html(d.reporter)
-						$("year").html(d.year)
-						$(".month").html(d.monthId)
-						$(".day").append("tet").html(d.day)
-						$(".miles").html(d.milesDriven)
-						$(".description").html(d.description)
-					})
+					div.html()
+					$("#reporter").html(d.reporter)
+					$("year").html(d.year)
+					$(".month").html(d.monthId)
+					$(".day").append("tet").html(d.day)
+					$(".miles").html(d.milesDriven)
+					$(".description").html(d.description)
+				})
 		};
-
 	</script>
 </body>
 
 </html>
+html>
