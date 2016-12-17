@@ -23,12 +23,16 @@ h4 {
   font-weight: bold;
 }
 
+a {
+  color: black;
+  font-weight: bold;
+}
+
 #reporter {
   color: white;
 }
 
 nav.sidenav a {
-    margin: 5px;
     float: left;
     clear: left;
 }
@@ -39,6 +43,18 @@ nav.sidenav {
     min-height: 100%;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+nav .title{
+  background: black;
+  color: white;
+  margin-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.icon img{
+  margin: 20px 10px 10px 15px;
 }
 
 .anchorline {

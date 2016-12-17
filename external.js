@@ -18,6 +18,11 @@ var dataset = [];
     renderChart(dataset);
   });
 
+// enable bootstrap tooltips everywhere
+  var menuToolTip = $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
 
 // on click of submit call the writeData function
 // get the variables from the form

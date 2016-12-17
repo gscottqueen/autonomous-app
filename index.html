@@ -5,6 +5,9 @@
 	<!-- latest jquery -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
+	<!-- thether for tool tips -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether-tooltip/1.2.0/js/tooltip.js" integrity="sha256-4+mmBPg5I8ir+kDLa52oooxDmsNBFUMU2FD50OHjz+I=" crossorigin="anonymous"></script>
+
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -45,9 +48,11 @@
 
 <body id="grad">
 	<nav class="sidenav">
-		<a class="icon" href="#"><span title="Source Data"><img src="./icons/SourceData.png" alt="Data Source"></span></a>
-		<a class="icon" href="#"><span title="About"><img src="./icons/About.png" alt="About"></span></a>
-		<a class="icon" href="#"><span title="Share"><img src="./icons/Share.png" alt="Share"></span></a>
+		<a class="icon title" href="#" title="API Source Data on google.firebse.io">BUILT WITH</a>
+		<a class="icon" href="#" title="API Source Data on google.firebse.io"><img src="./icons/firebase.png" alt="Data Source"></a>
+		<a class="icon" href="#"><span title="Data Driven Documents Framework"><img src="./icons/d3.png" alt="About"></span></a>
+		<a class="icon" href="#"><span title="Built with Jquery"><img src="./icons/jquery.png" alt="Share"></span></a>
+		<a class="icon" href="#"><span title="Fork on Github"><img src="./icons/github.png" alt="Share"></span></a>
 	</nav>
 	<div class="container-fluid">
 		<div class="row">
@@ -75,7 +80,8 @@
 					</p>
 
 					<h4> Incident Report:</h4>
-					<p id="description" class="description">
+					<p id="description" class="description">This chart is a scatterplot using <a href="https://d3js.org/">data driven documents (d3)</a> with an open source api located at <a href="https://autonomous-app.firebaseio.com/">
+						autonomous-app.firebaseio.com</a> and represents traffic incidents reported by autonomous vehicle developers and owners.  To see details of the reported incidents roll over each point on the chart.
 					</p>
 				</div>
 				<div class="data col-md-9">
@@ -87,6 +93,12 @@
 	</div>
 	</div>
 	<script>
+
+	// tool tip roll over in menu
+	  $(document).ready(function(){
+	      $('[data-toggle="tooltip"]').tooltip();
+	  });
+
 		//create svg
 		var dataSection = d3.select("#dataSection")
 
@@ -154,12 +166,6 @@
 						$(".miles").html(d.milesDriven)
 						$(".description").html(d.description)
 					})
-
-					.on("mouseout", function(d) {
-				            div.transition()
-				                .duration(500)
-				                .style("opacity", 0);
-			})
 		};
 
 	</script>
