@@ -18,8 +18,6 @@ var dataset = [];
     renderChart(dataset);
   });
 
-
-
 // on click of submit call the writeData function
 // get the variables from the form
 // pass the variables into the set object for the firebase.database

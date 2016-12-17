@@ -124,6 +124,14 @@ button.orange {
     padding-left: 110px;
 }
 
+.submitButton {
+    color: white;
+    background: slateGrey;
+    border: none;
+    width: 150px;
+    height: 40px;
+}
+
 
 /*SVG*/
 
