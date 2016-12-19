@@ -198,13 +198,13 @@
 
 		// Create the SVG Viewport selection
 		var svgContainer = dataSection.append("svg")
-			.attr("width", 999)
-			.attr("height", 575)
+			.attr("width", 950)
+			.attr("height", 600)
 
 		//  Create the Scale we will use for the Axis
 		var xAxisScale = d3.scale.linear()
 			.domain([0, 12])
-			.range([0, 875]);
+			.range([0, 800]);
 		var yAxisScale = d3.scale.linear()
 			.domain([0, 31])
 			.range([500, 0]);
@@ -218,17 +218,17 @@
 		var yAxis = d3.svg.axis()
 			.scale(yAxisScale)
 			.orient("left")
-			.ticks(3);
+			.ticks(10);
 		typeof(yAxis)
 
 		//Create a group Element for the Axis elements and call the xAxis styles and functions
 		xAxisGroup = svgContainer.append("g")
 			.attr("class", "xaxis")
-			.attr("transform", "translate(40,540)")
+			.attr("transform", "translate(100,540)")
 			.call(xAxis);
 		yAxisGroup = svgContainer.append("g")
 			.attr("class", "yaxis")
-			.attr("transform", "translate(40,40)")
+			.attr("transform", "translate(100,40)")
 			.call(yAxis);
 
 		// Define the div for the tooltip
@@ -248,9 +248,9 @@
 				})
 				.attr("r", 10)
 				.attr("class", "points")
-				.attr("transform", "translate(15,40)")
+				.attr("transform", "translate(100,40)")
 				.on("mouseover", function(d) {
-					div.html()
+					$("").fadeIn(5000);
 					$("#reporter").html(d.reporter)
 					$(".year").html(d.year)
 					$(".month").html(d.monthId)
