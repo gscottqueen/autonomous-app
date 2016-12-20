@@ -250,13 +250,12 @@
 				.attr("class", "points")
 				.attr("transform", "translate(100,40)")
 				.on("mouseover", function(d) {
-					$("").fadeIn(5000);
-					$("#reporter").html(d.reporter)
-					$(".year").html(d.year)
-					$(".month").html(d.monthId)
-					$(".day").append("tet").html(d.day)
-					$(".miles").html(d.milesDriven)
-					$(".description").html(d.description)
+					$("#reporter").hide().html(d.reporter).fadeIn(200);
+					$(".year").hide().html(d.year).fadeIn(200);
+					$(".month").hide().html(d.monthId).fadeIn(200);
+					$(".day").hide().html(d.day).fadeIn(200);
+					$(".miles").hide().html(d.milesDriven).fadeIn(200);
+					$(".description").hide().html(d.description).fadeIn(200);
 				})
 		};
 	</script>
