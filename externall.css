@@ -132,6 +132,13 @@ button.orange {
     height: 40px;
 }
 
+.description {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow: -moz-scrollbars-vertical;
+    overflow: scroll;
+}
+
 
 /*SVG*/
 
