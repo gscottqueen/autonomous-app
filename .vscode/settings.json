@@ -3,4 +3,6 @@
     "editor.fontSize": 14,
 
     "beautify.onSave": true,
+
+    "editor.formatOnSave": true,
 }
