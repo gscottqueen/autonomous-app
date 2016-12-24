@@ -14,6 +14,12 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 					crossorigin="anonymous"></script>
+	<!-- Bootstrap Date-Picker Plugin -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
+	/>
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
 	<!-- Latest compiled and minified d3 script -->
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 	<!-- Initiate Firebase -->
@@ -28,7 +34,6 @@
 			messagingSenderId: "610368115071"
 		};
 		firebase.initializeApp(config);
-		
 	</script>
 	<!-- insert external js -->
 	<script src="external.js"></script>
@@ -58,7 +63,8 @@
 						Reporter: <span id="reporter">Manufacture</span>
 					</h3>
 					<p class="details">
-						Date: <span style="font-weight:bold; color:white;"><span class="month">MM</span>.<span class="day">DD</span>.<span class="year">YYYY</span>
+						Date: <span style="font-weight:bold; color:white;"><span class="month">MM</span>.<span class="day">DD</span>.
+						<span class="year">YYYY</span>
 						</span>
 					</p>
 					<p class="details">
@@ -132,17 +138,23 @@
 												</div>
 											</div>
 											<!-- date time picker -->
-											<div class="form-group">
-												<label class="col-md-4 control-label" for="password">Date</label>
-												<div class="col-sm-5">
-													<div class='input-group date' id='datetimepicker9'>
-														<input type='text' class="form-control" placeholder="MM/DD/YYYY" />
-														<span class="input-group-addon">
-                    					<span class="glyphicon glyphicon-calendar">
-                    					</span>
-														</span>
-													</div>
-												</div>
+										<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+    <form method="post">
+     <div class="form-group ">
+      <label class="control-label " for="date">
+       Date
+      </label>
+      <div class="input-group">
+       <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+       <div class="input-group-addon">
+        <i class="fa fa-calendar">
+        </i>
+       </div>
+      </div>
+     </div>
 										</fieldset>
 									</form>
 									<div class="modal-footer">
@@ -165,6 +177,11 @@
 	</div>
 	</div>
 	</div>
+	<script>
+		$(function () {
+			$('#datetimepicker1').datetimepicker();
+		});
+	</script>
 </body>
 
 </html>
