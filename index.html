@@ -18,8 +18,8 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
 	/>
-<!--Font Awesome (added because you use icons in your prepend/append)-->
-<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<!--Font Awesome (added because you use icons in your prepend/append)-->
+	<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
 	<!-- Latest compiled and minified d3 script -->
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 	<!-- Initiate Firebase -->
@@ -126,7 +126,7 @@
 													<select id="selectbasic" name="selectbasic" class="form-control">
       											<option value="1">Google</option>
       											<option value="2">Tesla</option>
-      											<option value="3">Other</option>
+      			<option value="3">Other</option>
     											</select>
 												</div>
 											</div>
@@ -138,35 +138,38 @@
 												</div>
 											</div>
 											<!-- date time picker -->
-										<div class="bootstrap-iso">
- <div class="container-fluid">
-  <div class="row">
-   <div class="col-md-6 col-sm-6 col-xs-12">
-    <form method="post">
-     <div class="form-group ">
-      <label class="control-label " for="date">
+											<div class="bootstrap-iso">
+												<div class="container-fluid">
+													<div class="row">
+														<div class="col-md-6 col-sm-6 col-xs-12">
+															<form method="post">
+																<div class="form-group ">
+																	<label class="control-label " for="date">
        Date
       </label>
-      <div class="input-group">
-       <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
-       <div class="input-group-addon">
-        <i class="fa fa-calendar">
+																	<div class="input-group">
+																		<input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+																		<div class="input-group-addon">
+																			<i class="fa fa-calendar">
         </i>
-       </div>
-      </div>
-     </div>
+																		</div>
+																	</div>
+																</div>
+										</fieldset>
+										</form>
+										<div class="modal-footer">
+											<!-- Button -->
+											<label class="col-md-4 control-label" for="singlebutton"></label>
+											<div class="col-md-4">
+												<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Submit</button>
+											</div>
+										</div>
+										</div>
 										</fieldset>
 									</form>
-									<div class="modal-footer">
-										<!-- Button -->
-										<label class="col-md-4 control-label" for="singlebutton"></label>
-										<div class="col-md-4">
-											<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Submit</button>
-										</div>
 									</div>
 									</div>
-									</fieldset>
-									</form>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -174,14 +177,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	</div>
-	</div>
-	<script>
-		$(function () {
-			$('#datetimepicker1').datetimepicker();
-		});
-	</script>
+		<script>
+			$(function () {
+				$('#datetimepicker1').datetimepicker();
+			});
+		</script>
 </body>
 
 </html>
