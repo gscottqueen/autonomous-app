@@ -1,8 +1,8 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "editor.fontSize": 14,
-
     "editor.formatOnSave": true,
 
-    "beautify.onSave": true,
+    "beautify.onSave": [
+        "html", "css", "js"
+    ]
 }
