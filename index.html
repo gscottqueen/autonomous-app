@@ -3,26 +3,21 @@
 <head>
 	<title>Autonomous App</title>
 	<!-- latest jquery -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-	<!-- thether for tool tips -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether-tooltip/1.2.0/js/tooltip.js" integrity="sha256-4+mmBPg5I8ir+kDLa52oooxDmsNBFUMU2FD50OHjz+I=" crossorigin="anonymous"></script>
-
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+					crossorigin="anonymous"></script>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+					crossorigin="anonymous">
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+					crossorigin="anonymous">
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+					crossorigin="anonymous"></script>
 	<!-- Latest compiled and minified d3 script -->
 	<script src="https://d3js.org/d3.v3.min.js"></script>
-
 	<!-- Initiate Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
-
 	<!-- Initialize Firebase -->
 	<script>
 		var config = {
@@ -33,17 +28,14 @@
 			messagingSenderId: "610368115071"
 		};
 		firebase.initializeApp(config);
+		
 	</script>
-
 	<!-- insert external js -->
 	<script src="external.js"></script>
-
 	<!-- Latest LoDash -->
 	<script src="https://cdn.jsdelivr.net/lodash/4.17.2/lodash.min.js"></script>
-
-	<!-- stylesheets -->
+	<!-- stylesheet -->
 	<link rel="stylesheet" href="externall.css">
-
 </head>
 
 <body id="grad">
@@ -63,17 +55,21 @@
 				<div class="info1 col-md-3">
 					<a class="icon car" href="#"><span title="Lexus self driving car"><img src="./Cars/rx450h.png"></span></a>
 					<h3 class="reporter">
-							Reporter: <span id="reporter">Manufacture</span>
-						</h3>
+						Reporter: <span id="reporter">Manufacture</span>
+					</h3>
 					<p class="details">
-						Date: <span style="font-weight:bold; color:white;"><span class="month">MM</span>-<span class="day">DD</span>-<span class="year">YYYY</span></span>
+						Date: <span style="font-weight:bold; color:white;"><span class="month">MM</span>-<span class="day">DD</span>-
+						<span class="year">YYYY</span>
+						</span>
 					</p>
 					<p class="details">
-						Total Autonomous Driven Miles: <span class="miles" style="font-weight:bold; color:white;">000000</span>
+						Total Autonomous Miles: <span class="miles" style="font-weight:bold; color:white;">000000</span>
 					</p>
 					<h4> Incident Report:</h4>
-					<p id="description" class="description">This chart is a scatterplot using <a href="https://d3js.org/">data driven documents (d3)</a> with an open source API located at <a href="https://autonomous-app.firebaseio.com/">
-						autonomous-app.firebaseio.com</a> and represents traffic incidents reported by autonomous vehicle manufacturers and owners. To see details of the reported incidents, mouseover each point on the chart.
+					<p id="description" class="description">This chart is a scatterplot using <a href="https://d3js.org/">data driven documents (d3)</a> with an open source API
+						located at <a href="https://autonomous-app.firebaseio.com/">
+						autonomous-app.firebaseio.com</a> and represents traffic incidents reported by autonomous vehicle manufacturers and
+						owners. To see details of the reported incidents, mouseover each point on the chart.
 					</p>
 				</div>
 				<div id="dataSection" class="col-md-9">
@@ -81,11 +77,9 @@
 				<div class="col-md-9">
 				</div>
 				<div class="formRight col-md-2">
-
 					<!-- Button trigger modal -->
 					<a><button type="button" class="orange" data-toggle="modal" data-target="#myModal"> Report an Incident >
 					</button></a>
-
 					<!-- Modal -->
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog" role="document">
@@ -93,19 +87,15 @@
 								<div class="modal-header">
 									<form class="form-horizontal">
 										<fieldset>
-
 											<!-- Form Name -->
 											<legend>Incident Report</legend>
-
 											<!-- Text input-->
 											<div class="form-group">
 												<label class="col-md-4 control-label" for="textinput">Name</label>
 												<div class="col-md-5">
 													<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
-
 												</div>
 											</div>
-
 											<!-- Multiple Checkboxes -->
 											<div class="form-group">
 												<label class="col-md-4 control-label" for="checkbox"></label>
@@ -117,16 +107,13 @@
 													</div>
 												</div>
 											</div>
-
 											<!-- Email input-->
 											<div class="form-group">
 												<label class="col-md-4 control-label" for="textinput">Email</label>
 												<div class="col-md-5">
 													<input id="textinput" name="textinput" type="text" placeholder="user@mail.com" class="form-control input-md">
-
 												</div>
 											</div>
-
 											<!-- Select Basic -->
 											<div class="form-group">
 												<label class="col-md-4 control-label" for="selectbasic">Manufacturer</label>
@@ -138,7 +125,6 @@
     											</select>
 												</div>
 											</div>
-
 											<!-- Textarea -->
 											<div class="form-group">
 												<label class="col-md-4 control-label" for="textarea">Details</label>
@@ -146,7 +132,6 @@
 													<textarea class="form-control" id="textarea" name="textarea">Enter a detailed description of the incident.</textarea>
 												</div>
 											</div>
-
 											<!-- date time picker -->
 											<div class="form-group">
 												<label class="col-md-4 control-label" for="password">Date</label>
@@ -159,14 +144,10 @@
 														</span>
 													</div>
 												</div>
-
 										</fieldset>
 									</form>
-
 									<div class="modal-footer">
-
 										<!-- Button -->
-
 										<label class="col-md-4 control-label" for="singlebutton"></label>
 										<div class="col-md-4">
 											<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Submit</button>
@@ -185,75 +166,6 @@
 	</div>
 	</div>
 	</div>
-	<script>
-		//create svg
-		var dataSection = d3.select("#dataSection")
-
-		// Create the SVG Viewport selection
-		var svgContainer = dataSection.append("svg")
-			.attr("width", 950)
-			.attr("height", 600)
-
-		//  Create the Scale we will use for the Axis
-		var xAxisScale = d3.scale.linear()
-			.domain([0, 12])
-			.range([0, 800]);
-		var yAxisScale = d3.scale.linear()
-			.domain([0, 31])
-			.range([500, 0]);
-
-		// Create the Axis
-		var xAxis = d3.svg.axis()
-			.scale(xAxisScale)
-			.orient("bottom")
-			.ticks(12)
-		typeof(xAxis)
-		var yAxis = d3.svg.axis()
-			.scale(yAxisScale)
-			.orient("left")
-			.ticks(10);
-		typeof(yAxis)
-
-		//Create a group Element for the Axis elements and call the xAxis styles and functions
-		xAxisGroup = svgContainer.append("g")
-			.attr("class", "xaxis")
-			.attr("transform", "translate(100,540)")
-			.call(xAxis);
-		yAxisGroup = svgContainer.append("g")
-			.attr("class", "yaxis")
-			.attr("transform", "translate(100,40)")
-			.call(yAxis);
-
-		// Define the div for the tooltip
-		var div = d3.select("#dataSection").append("div")
-
-		//  Plot the data and draw the Cirlces
-		var renderChart = function(dataset) {
-			svgContainer.selectAll("circle")
-				.data(dataset)
-				.enter()
-				.append("circle")
-				.attr("cx", function(d) {
-					return xAxisScale(d.monthId);
-				})
-				.attr("cy", function(d) {
-					return yAxisScale(d.day);
-				})
-				.attr("r", 10)
-				.attr("class", "points")
-				.attr("transform", "translate(100,40)")
-				.on("mouseover", function(d) {
-					$("#reporter").hide().html(d.reporter).fadeIn(200);
-					$(".year").hide().html(d.year).fadeIn(200);
-					$(".month").hide().html(d.monthId).fadeIn(200);
-					$(".day").hide().html(d.day).fadeIn(200);
-					$(".miles").hide().html(d.milesDriven).fadeIn(200);
-					$(".description").hide().html(d.description).fadeIn(200);
-					// $(".car").a(d.type)
-					// }
-				})
-		};
-	</script>
 </body>
 
 </html>
