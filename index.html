@@ -3,21 +3,16 @@
 <head>
 	<title>Autonomous App</title>
 	<!-- latest jquery -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-					crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-					crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-					crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-					crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!-- Bootstrap Date-Picker Plugin -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
-	/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 	<!--Font Awesome (added because you use icons in your prepend/append)-->
 	<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
 	<!-- Latest compiled and minified d3 script -->
@@ -43,137 +38,328 @@
 	<link rel="stylesheet" href="externall.css">
 </head>
 
-<body id="grad">
-	<nav class="sidenav">
-		<a class="icon nav">BUILT WITH</a>
-		<a class="icon" href="#"><span title="API Source Data on google.firebse.io"><img src="./icons/Firebase.png" alt="Data Source"></span></a>
-		<a class="icon" href="#"><span title="Data Driven Documents Framework"><img src="./icons/d3.png" alt="About"></span></a>
-		<a class="icon" href="#"><span title="Built with Jquery"><img src="./icons/jquery.png" alt="Share"></span></a>
-		<a class="icon" href="#"><span title="Fork on Github"><img src="./icons/github.png" alt="Share"></span></a>
-	</nav>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="leftgutter col-md-12">
-				<div class="row title">
-					<h1>Autonomous Incident Data</h1>
+<!-- start new html -->
+<div class="container-fluid">
+	<!-- start navigation	 -->
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <a class="navbar-brand" href="#">Brand</a>
 				</div>
-				<div class="info1 col-md-3">
-					<a class="icon car" href="#"><span title="Lexus self driving car"><img src="./Cars/rx450h.png"></span></a>
-					<h3 class="reporter">
-						Reporter: <span id="reporter">Manufacture</span>
-					</h3>
-					<p class="details">
-						Date: <span style="font-weight:bold; color:white;"><span class="month">MM</span>.<span class="day">DD</span>.
-						<span class="year">YYYY</span>
-						</span>
-					</p>
-					<p class="details">
-						Total Autonomous Miles: <span class="miles" style="font-weight:bold; color:white;">000000</span>
-					</p>
-					<h4> Incident Report:</h4>
-					<p id="description" class="description">This chart is a scatterplot using <a href="https://d3js.org/">data driven documents (d3)</a> with an open source API
-						located at <a href="https://autonomous-app.firebaseio.com/">
-						autonomous-app.firebaseio.com</a> and represents traffic incidents reported by autonomous vehicle manufacturers and
-						owners. To see details of the reported incidents, mouseover each point on the chart.
-					</p>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#">Link</a>
+						</li>
+						<li>
+							<a href="#">Link</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" />
+						</div>
+						<button type="submit" class="btn btn-default">
+							Submit
+						</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#">Link</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
-				<div id="dataSection" class="col-md-9">
-				</div>
-				<div class="col-md-9">
-				</div>
-				<div class="formRight col-md-2">
-					<!-- Button trigger modal -->
-					<a><button type="button" class="orange" data-toggle="modal" data-target="#myModal"> Report an Incident >
-					</button></a>
-					<!-- Modal -->
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<form class="form-horizontal">
-										<fieldset>
-											<!-- Form Name -->
-											<legend>Incident Report</legend>
-											<!-- Text input-->
-											<div class="form-group">
-												<label class="col-md-4 control-label" for="textinput">Name</label>
-												<div class="col-md-5">
-													<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
-												</div>
+			</nav>
+			<!-- end navigation -->
+			<!-- start splash image -->
+			<div class="jumbotron">
+				<h2>
+					Hello, world!
+				</h2>
+				<p>
+					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- end splash image -->
+	<!-- start three details	 -->
+	<div class="row">
+		<div class="col-md-4">
+			<h2>
+				Heading
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				<a class="btn" href="#">View details »</a>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h2>
+				Heading
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				<a class="btn" href="#">View details »</a>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h2>
+				Heading
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				<a class="btn" href="#">View details »</a>
+			</p>
+		</div>
+	</div>
+	<!-- end three details -->
+	<!-- start infographic header -->
+	<div class="row title">
+		<div class="col-md-12">
+			<h1>Autonomous Incident Data</h1>
+		</div>
+	</div>
+	<!-- end infographic header -->
+	<!-- start d3 scatterplot -->
+	<div id="grad" class="row info1">
+		<div class="col-md-3">
+			<a class="icon car" href="#"><span title="Lexus self driving car"><img src="./Cars/rx450h.png"></span></a>
+			<h3 class="reporter">
+				Reporter: <span id="reporter">Manufacture</span>
+			</h3>
+			<p class="details">
+				Date: <span style="font-weight:bold; color:white;"><span class="month">MM</span>.<span class="day">DD</span>.
+				<span class="year">YYYY</span>
+				</span>
+			</p>
+			<p class="details">
+				Total Autonomous Miles: <span class="miles" style="font-weight:bold; color:white;">000000</span>
+			</p>
+			<h4> Incident Report:</h4>
+			<p id="description" class="description">This chart is a scatterplot using <a href="https://d3js.org/">data driven documents (d3)</a> with an open source API located at <a href="https://autonomous-app.firebaseio.com/">
+				autonomous-app.firebaseio.com</a> and represents traffic incidents reported by autonomous vehicle manufacturers and owners. To see details of the reported incidents, mouseover each point on the chart.
+			</p>
+		</div>
+		<div id="dataSection" class="col-md-9 ">
+		</div>
+	</div>
+</div>
+<!-- end d3 scatterplot -->
+<!-- start submit footer -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="formRight col-md-2">
+			<!-- Button trigger modal -->
+			<a><button type="button" class="orange" data-toggle="modal" data-target="#myModal"> Report an Incident >
+			</button></a>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<form class="form-horizontal">
+								<fieldset>
+									<!-- Form Name -->
+									<legend>Incident Report</legend>
+									<!-- Text input-->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="textinput">Name</label>
+										<div class="col-md-5">
+											<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+										</div>
+									</div>
+									<!-- Multiple Checkboxes -->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="checkbox"></label>
+										<div class="col-md-5">
+											<div class="checkbox">
+												<label for="checkbox-0">
+													<input type="checkbox" name="checkbox" id="checkbox-0" value="1">Keep me anonymous
+													</label>
 											</div>
-											<!-- Multiple Checkboxes -->
-											<div class="form-group">
-												<label class="col-md-4 control-label" for="checkbox"></label>
-												<div class="col-md-5">
-													<div class="checkbox">
-														<label for="checkbox-0">
-      												<input type="checkbox" name="checkbox" id="checkbox-0" value="1">Keep me anonymous
-    													</label>
-													</div>
-												</div>
-											</div>
-											<!-- Email input-->
-											<div class="form-group">
-												<label class="col-md-4 control-label" for="textinput">Email</label>
-												<div class="col-md-5">
-													<input id="textinput" name="textinput" type="text" placeholder="user@mail.com" class="form-control input-md">
-												</div>
-											</div>
-											<!-- Select Basic -->
-											<div class="form-group">
-												<label class="col-md-4 control-label" for="selectbasic">Manufacturer</label>
-												<div class="col-md-5">
-													<select id="selectbasic" name="selectbasic" class="form-control">
-      											<option value="1">Google</option>
-      											<option value="2">Tesla</option>
-												<option value="3">Other</option>
-    											</select>
-												</div>
-											</div>
-											<!-- Textarea -->
-											<div class="form-group">
-												<label class="col-md-4 control-label" for="textarea">Details</label>
-												<div class="col-md-5">
-													<textarea class="form-control" id="textarea" name="textarea">Enter a detailed description of the incident.</textarea>
-												</div>
-											</div>
-											<!-- date time picker -->
-											<div class="bootstrap-iso">
-												<div class="container-fluid">
-													<div class="row">
-														<div class="col-md-6 col-sm-6 col-xs-12">
-															<form method="post">
-																<div class="form-group ">
-																	<label class="control-label " for="date">Date</label>
-																	<div class="input-group">
-																		<input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
-																		<div class="input-group-addon">
-																			<i class="fa fa-calendar"></i>
-																		</div>
-																	</div>
+										</div>
+									</div>
+									<!-- Email input-->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="textinput">Email</label>
+										<div class="col-md-5">
+											<input id="textinput" name="textinput" type="text" placeholder="user@mail.com" class="form-control input-md">
+										</div>
+									</div>
+									<!-- Select Basic -->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="selectbasic">Manufacturer</label>
+										<div class="col-md-5">
+											<select id="selectbasic" name="selectbasic" class="form-control">
+												<option value="1">Google</option>
+												<option value="2">Tesla</option>
+										<option value="3">Other</option>
+											</select>
+										</div>
+									</div>
+									<!-- Textarea -->
+									<div class="form-group">
+										<label class="col-md-4 control-label" for="textarea">Details</label>
+										<div class="col-md-5">
+											<textarea class="form-control" id="textarea" name="textarea">Enter a detailed description of the incident.</textarea>
+										</div>
+									</div>
+									<!-- date time picker -->
+									<div class="bootstrap-iso">
+										<div class="container-fluid">
+											<div class="row">
+												<div class="col-md-6 col-sm-6 col-xs-12">
+													<form method="post">
+														<div class="form-group ">
+															<label class="control-label " for="date">Date</label>
+															<div class="input-group">
+																<input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
+																<div class="input-group-addon">
+																	<i class="fa fa-calendar"></i>
 																</div>
-										</fieldset>
-										</form>
-										<div class="modal-footer">
-											<!-- Button -->
-											<label class="col-md-4 control-label" for="singlebutton"></label>
-											<div class="col-md-4">
-												<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Submit</button>
-											</div>
-										</div>
-										</div>
-										</fieldset>
-									</form>
-									</div>
-									</div>
+															</div>
+														</div>
+								</fieldset>
+								</form>
+								<div class="modal-footer">
+									<!-- Button -->
+									<label class="col-md-4 control-label" for="singlebutton"></label>
+									<div class="col-md-4">
+										<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Submit</button>
 									</div>
 								</div>
+								</div>
+								</fieldset>
+							</form>
+							</div>
+							</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+<!-- end submit footer -->
+<!-- start stats table -->
+<div class="row">
+	<div class="col-md-12">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>
+						#
+					</th>
+					<th>
+						Product
+					</th>
+					<th>
+						Payment Taken
+					</th>
+					<th>
+						Status
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1
+					</td>
+					<td>
+						TB - Monthly
+					</td>
+					<td>
+						01/04/2012
+					</td>
+					<td>
+						Default
+					</td>
+				</tr>
+				<tr class="active">
+					<td>
+						1
+					</td>
+					<td>
+						TB - Monthly
+					</td>
+					<td>
+						01/04/2012
+					</td>
+					<td>
+						Approved
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- end stats table -->
+<!-- start footer -->
+<div class="row">
+	<div class="col-md-12">
+	</div>
+</div>
+</div>
+<!-- end footer -->
+<!-- end new html -->
 </body>
 
 </html>
