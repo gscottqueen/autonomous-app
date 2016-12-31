@@ -27,13 +27,6 @@ h3 {
     font-weight: 300;
 }
 
-.formRight {
-    float: right;
-    position: 35px;
-    padding-left: 35px;
-    margin-top: 25px;
-}
-
 h4 {
     margin-top: 25px;
     font-weight: bold;
@@ -50,6 +43,30 @@ a {
 
 section .datablock {
     padding: 15px;
+}
+
+
+/*.hero {
+    height: 600px;
+}*/
+
+.jumbotron {
+    min-height: 200px;
+}
+
+.heroimage {
+    background-image: url("./images/Self-Driving-Car.jpg");
+    height: 800px;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.formRight {
+    float: right;
+    position: 35px;
+    padding-left: 35px;
+    margin-top: 25px;
 }
 
 #reporter {
