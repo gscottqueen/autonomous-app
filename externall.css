@@ -94,11 +94,17 @@
             margin-bottom: 100px;
             margin-left: 50px;
             margin-right: 50px;
+            text-align: center;
         }
 
         img.iconimg {
             width: 50%;
             float: left;
+        }
+
+        .autovideo {
+            margin-bottom: 50px;
+            margin-top: 50px;
         }
 
         .formRight {
