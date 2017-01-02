@@ -97,14 +97,11 @@
             text-align: center;
         }
 
-        img.iconimg {
-            width: 50%;
-            float: left;
-        }
-
         .autovideo {
-            margin-bottom: 50px;
+            margin-bottom: 100px;
             margin-top: 50px;
+            padding: 30px;
+            text-align: center;
         }
 
         .formRight {
