@@ -41,8 +41,9 @@
             padding: 0px;
         }
 
-        section .datablock {
+        .datablock {
             padding: 15px;
+            padding-top: 60px;
         }
 
         .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
@@ -129,6 +130,7 @@
             padding-bottom: 15px;
             margin-left: 15px;
             padding-bottom: 0px;
+            padding-top: 40px;
         }
 
         a.car img {
