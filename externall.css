@@ -11,6 +11,8 @@
             background: -ms-linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
             background: linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
             filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffcc', endColorstr='#621aff', GradientType=1);
+            padding-right: 25px;
+            padding-left: 25px;
         }
 
         h2 {
@@ -40,11 +42,10 @@
         .container-full-fluid {
             padding: 0px;
         }
-
-        .datablock {
-            padding: 15px;
+        /*.datablock {
+            padding right: 25px;
             padding-top: 60px;
-        }
+        }*/
 
         .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
             padding-right: 25px;
@@ -53,7 +54,7 @@
 
         .herocallout {
             text-align: center;
-            margin: 100px;
+            margin: 50px;
         }
 
         button.herobtn {
@@ -67,7 +68,7 @@
             border: solid #ffffff 2px;
             text-decoration: none;
             background: none;
-            margin: 50px;
+            margin-top: 30px;
         }
 
         button.herobtn:hover {
@@ -86,6 +87,8 @@
             background-image: url("./images/Self-Driving-Car.jpg");
             height: 800px;
             max-width: 100%;
+            background-position: center center;
+            background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -134,22 +137,9 @@
         }
 
         a.car img {
-            width: 250px;
-            margin-top: 25px;
-            margin-left: 25px;
-        }
-
-        button.orange {
-            color: white;
-            background: orange;
-            border-top-width: 0px;
-            border-right-width: 0px;
-            border-bottom-width: 0px;
-            border-left-width: 0px;
-            padding-top: 12px;
-            padding-left: 12px;
-            padding-bottom: 12px;
-            padding-right: 12px;
+            width: 150px;
+            margin: 25px;
+            float: left;
         }
 
         #chart {
@@ -165,10 +155,12 @@
         }
 
         .description {
-            max-height: 200px;
-            overflow-y: auto;
-            overflow: -moz-scrollbars-vertical;
-            overflow: scroll;
+            padding-left: 25px;
+        }
+
+        .descriptiontitle {
+            padding-left: 25px;
+            font-weight: bold;
         }
         /*SVG*/
 
