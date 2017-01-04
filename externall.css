@@ -42,10 +42,6 @@
         .container-full-fluid {
             padding: 0px;
         }
-        /*.datablock {
-            padding right: 25px;
-            padding-top: 60px;
-        }*/
 
         .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
             padding-right: 25px;
@@ -55,6 +51,16 @@
         .herocallout {
             text-align: center;
             margin: 80px;
+        }
+
+        button a {
+            color: white;
+            transition: transform 500ms ease-out;
+        }
+
+        button a:hover {
+            color: white;
+            text-decoration: none;
         }
 
         button.herobtn {
@@ -96,8 +102,8 @@
         .criteriablock {
             margin-top: 50px;
             margin-bottom: 100px;
-            margin-left: 50px;
-            margin-right: 50px;
+            margin-left: 25px;
+            margin-right: 25px;
             text-align: center;
         }
 
