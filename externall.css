@@ -44,14 +44,20 @@
         }
 
         .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
-            padding-right: 25px;
-            padding-left: 25px;
+            padding-right: 35px;
+            padding-left: 35px;
         }
 
         nav.bluelogo.navbar-default .navbar-nav>li>a {
             color: #3B79FF;
-            font-size: 12px;
-            font-weight: 400;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        nav.bluelogo.navbar-default .navbar-nav>li>a:hover {
+            color: #777;
+            font-size: 14px;
+            font-weight: 500;
         }
 
         a.bluelogo.navbar-brand {
@@ -63,6 +69,7 @@
         .herocallout {
             text-align: center;
             margin: 80px;
+            color: white;
         }
 
         button a {
