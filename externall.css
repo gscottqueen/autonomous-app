@@ -131,7 +131,7 @@
             background-image: url("./images/elonmusk.jpg");
             height: 800px;
             max-width: 100%;
-            background-position: center center;
+            background-position: right center;
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
@@ -143,9 +143,9 @@
         .quotebg .quote p {
             text-align: left;
             font-size: 44px;
-            margin-right: 400px;
             color: #3B79FF;
-            padding: 150px;
+            padding-left: 50px;
+            margin-top: 100px;
         }
 
         .shadow {
