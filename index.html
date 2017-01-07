@@ -30,7 +30,7 @@
 		};
 		firebase.initializeApp(config);
 	</script>
-	<!-- insert external js -->
+	<!-- Insert external js -->
 	<script src="external.js"></script>
 	<!-- Latest LoDash -->
 	<script src="https://cdn.jsdelivr.net/lodash/4.17.2/lodash.min.js"></script>
@@ -42,13 +42,13 @@
 	<!-- start navigation	 -->
 	<div class="row">
 		<div class="col-md-12">
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<nav class="bluelogo navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</button> <a class="navbar-brand" href="#">Autonomous Vehicle Incidents</a>
+					</button> <a class="bluelogo navbar-brand" href="#">Autonomous Vehicle Incidents</a>
 				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<div class="navcontainer collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -92,9 +92,9 @@
 			Where does the data come from?
 			</h2>
 			<div class="col-md-4">
-				<img src="./images/incident-b.png" alt="">
+				<img src="./images/report-b.png" alt="">
 				<h2>
-				Incidents
+				Reports
 			</h2>
 				<p>
 					Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
@@ -110,9 +110,9 @@
 				</p>
 			</div>
 			<div class="col-md-4">
-				<img src="./images/report-b.png" alt="">
+				<img src="./images/incident-b.png" alt="">
 				<h2>
-				Reports
+				Incidents
 			</h2>
 				<p>
 					Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
@@ -185,23 +185,24 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="formRight col-md-2">
-			<!-- Modal -->
+			<!-- Build Modal Form-->
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<form class="form-horizontal">
+							<!-- Start Form -->
+							<form id="report-incident" class="form-horizontal">
 								<fieldset>
 									<!-- Form Name -->
 									<legend>Incident Report</legend>
-									<!-- Text input-->
+									<!-- Text input, name-->
 									<div class="form-group">
 										<label class="col-md-4 control-label" for="textinput">Name</label>
 										<div class="col-md-5">
-											<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+											<input id="name" name="textinput" type="text" placeholder="" class="form-control input-md">
 										</div>
 									</div>
-									<!-- Multiple Checkboxes -->
+									<!-- Anon Checkbox -->
 									<div class="form-group">
 										<label class="col-md-4 control-label" for="checkbox"></label>
 										<div class="col-md-5">
@@ -216,28 +217,28 @@
 									<div class="form-group">
 										<label class="col-md-4 control-label" for="textinput">Email</label>
 										<div class="col-md-5">
-											<input id="textinput" name="textinput" type="text" placeholder="user@mail.com" class="form-control input-md">
+											<input id="email" name="textinput" type="text" placeholder="user@mail.com" class="form-control input-md">
 										</div>
 									</div>
-									<!-- Select Basic -->
+									<!-- Select Manufacturer -->
 									<div class="form-group">
 										<label class="col-md-4 control-label" for="selectbasic">Manufacturer</label>
 										<div class="col-md-5">
-											<select id="selectbasic" name="selectbasic" class="form-control">
+											<select id="manufacturer" name="selectbasic" class="form-control">
 												<option value="1">Google</option>
 												<option value="2">Tesla</option>
 										<option value="3">Other</option>
 											</select>
 										</div>
 									</div>
-									<!-- Textarea -->
+									<!-- Text area, details -->
 									<div class="form-group">
 										<label class="col-md-4 control-label" for="textarea">Details</label>
 										<div class="col-md-5">
-											<textarea class="form-control" id="textarea" name="textarea">Enter a detailed description of the incident.</textarea>
+											<textarea class="form-control" id="details" name="textarea">Enter a detailed description of the incident.</textarea>
 										</div>
 									</div>
-									<!-- date time picker -->
+									<!-- Date Picker -->
 									<div class="bootstrap-iso">
 										<div class="container-fluid">
 											<div class="row">
@@ -255,7 +256,7 @@
 								</fieldset>
 								</form>
 								<div class="modal-footer">
-									<!-- Button -->
+									<!-- Submit Button -->
 									<label class="col-md-4 control-label" for="singlebutton"></label>
 									<div class="col-md-4">
 										<button type="submit" id="submit" class="loginButton" style="color:white;background:slateGrey;border:none;width:150px;height:40px;">Submit</button>

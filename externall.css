@@ -48,6 +48,18 @@
             padding-left: 25px;
         }
 
+        nav.bluelogo.navbar-default .navbar-nav>li>a {
+            color: #3B79FF;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        a.bluelogo.navbar-brand {
+            color: #3B79FF;
+            font-weight: 400;
+            font-size: 22px;
+        }
+
         .herocallout {
             text-align: center;
             margin: 80px;
