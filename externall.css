@@ -1,265 +1,270 @@
-        body {
-            font-family: "Lato", sans-serif;
-        }
+                body {
+                    font-family: "Lato", sans-serif;
+                }
 
-        #grad {
-            background: rgba(0, 255, 204, 1);
-            background: -moz-linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
-            background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(0, 255, 204, 1)), color-stop(7%, rgba(0, 233, 250, 1)), color-stop(39%, rgba(56, 129, 255, 1)), color-stop(50%, rgba(56, 129, 255, 1)), color-stop(100%, rgba(98, 26, 255, 1)));
-            background: -webkit-linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
-            background: -o-linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
-            background: -ms-linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
-            background: linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
-            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffcc', endColorstr='#621aff', GradientType=1);
-            padding-right: 25px;
-            padding-left: 25px;
-        }
+                #grad {
+                    background: rgba(0, 255, 204, 1);
+                    background: -moz-linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
+                    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(0, 255, 204, 1)), color-stop(7%, rgba(0, 233, 250, 1)), color-stop(39%, rgba(56, 129, 255, 1)), color-stop(50%, rgba(56, 129, 255, 1)), color-stop(100%, rgba(98, 26, 255, 1)));
+                    background: -webkit-linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
+                    background: -o-linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
+                    background: -ms-linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
+                    background: linear-gradient(45deg, rgba(0, 255, 204, 1) 0%, rgba(0, 233, 250, 1) 7%, rgba(56, 129, 255, 1) 39%, rgba(56, 129, 255, 1) 50%, rgba(98, 26, 255, 1) 100%);
+                    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffcc', endColorstr='#621aff', GradientType=1);
+                    padding-right: 25px;
+                    padding-left: 25px;
+                }
 
-        h2 {
-            margin-bottom: 15px;
-            font-weight: 700;
-            font-family: "Lato", sans-serif;
-            font-weight: 300;
-        }
+                h1 {
+                    font-weight: 400;
+                    font-family: "Lato", sans-serif;
+                }
 
-        h3 {
-            margin-bottom: 15px;
-            font-weight: 700;
-            font-family: "Lato", sans-serif;
-            font-weight: 300;
-        }
+                h2 {
+                    margin-bottom: 15px;
+                    font-family: "Lato", sans-serif;
+                    font-weight: 300;
+                }
 
-        h4 {
-            margin-top: 25px;
-            font-weight: bold;
-        }
+                h3 {
+                    margin-bottom: 15px;
+                    font-family: "Lato", sans-serif;
+                    font-weight: 300;
+                }
 
-        a {
-            color: black;
-            font-weight: bold;
-        }
+                h4 {
+                    margin-top: 25px;
+                    font-weight: bold;
+                }
 
-        .container-full-fluid {
-            padding: 0px;
-        }
+                a {
+                    color: black;
+                    font-weight: bold;
+                }
 
-        .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
-            padding-right: 35px;
-            padding-left: 35px;
-        }
+                .container-full-fluid {
+                    padding: 0px;
+                }
 
-        nav.bluelogo.navbar-default .navbar-nav>li>a {
-            color: #3B79FF;
-            font-size: 14px;
-            font-weight: 500;
-        }
+                .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
+                    padding-right: 35px;
+                    padding-left: 35px;
+                }
 
-        nav.bluelogo.navbar-default .navbar-nav>li>a:hover {
-            color: #777;
-            font-size: 14px;
-            font-weight: 500;
-        }
+                nav.bluelogo.navbar-default .navbar-nav>li>a {
+                    color: #3B79FF;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
 
-        a.bluelogo.navbar-brand {
-            color: #3B79FF;
-            font-weight: 400;
-            font-size: 22px;
-        }
+                nav.bluelogo.navbar-default .navbar-nav>li>a:hover {
+                    color: #777;
+                    font-size: 14px;
+                    font-weight: 500;
+                    -webkit-transition: all 0.5s ease;
+                }
 
-        .herocallout {
-            text-align: center;
-            margin: 80px;
-            color: white;
-        }
+                a.bluelogo.navbar-brand {
+                    color: #3B79FF;
+                    font-weight: 400;
+                    font-size: 22px;
+                }
 
-        button a {
-            color: white;
-            transition: transform 500ms ease-out;
-        }
+                .herocallout {
+                    text-align: left;
+                    margin: 80px;
+                    color: white;
+                }
 
-        button a:hover {
-            color: white;
-            text-decoration: none;
-        }
+                button a {
+                    color: white;
+                    transition: transform 500ms ease-out;
+                    font-weight: 100;
+                }
 
-        button.herobtn {
-            -webkit-border-radius: 28;
-            -moz-border-radius: 28;
-            border-radius: 28px;
-            font-family: Arial;
-            color: #ffffff;
-            font-size: 20px;
-            padding: 10px 30px 10px 30px;
-            border: solid #ffffff 2px;
-            text-decoration: none;
-            background: none;
-            margin-top: 30px;
-        }
+                button a:hover {
+                    color: white;
+                    text-decoration: none;
+                }
 
-        button.herobtn:hover {
-            -webkit-border-radius: 28;
-            -moz-border-radius: 28;
-            border-radius: 28px;
-            font-family: Arial;
-            color: #ffffff;
-            font-size: 20px;
-            padding: 10px 30px 10px 30px;
-            border: solid #ffffff 2px;
-            text-decoration: none;
-            background: #cfcfcf;
-        }
+                button.herobtn {
+                    -webkit-border-radius: 28;
+                    -moz-border-radius: 28;
+                    border-radius: 28px;
+                    font-family: Arial;
+                    font-size: 20px;
+                    padding: 10px 30px 10px 30px;
+                    border: solid #ffffff 2px;
+                    text-decoration: none;
+                    background: none;
+                    margin-top: 30px;
+                    background-color: orange;
+                }
 
-        .heroimage {
-            background-image: url("./images/Self-Driving-Car.jpg");
-            height: 800px;
-            max-width: 100%;
-            background-position: center center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+                button.herobtn:hover {
+                    -webkit-border-radius: 28;
+                    -moz-border-radius: 28;
+                    border-radius: 28px;
+                    font-family: Arial;
+                    color: #ffffff;
+                    font-size: 20px;
+                    padding: 10px 30px 10px 30px;
+                    border: solid #ffffff 2px;
+                    text-decoration: none;
+                    background: #cfcfcf;
+                }
 
-        .criteriablock {
-            margin-top: 50px;
-            margin-bottom: 100px;
-            margin-left: 25px;
-            margin-right: 25px;
-            text-align: center;
-        }
+                .heroimage {
+                    background-image: url("./images/Self-Driving-Car.jpg");
+                    height: 800px;
+                    max-width: 100%;
+                    background-position: center center;
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
 
-        .quotebg {
-            background-image: url("./images/elonmusk.jpg");
-            height: 800px;
-            max-width: 100%;
-            background-position: right center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-            min-height: 400px;
-            background-color: #fbfbfb;
-            /*opacity: 0.3;*/
-        }
+                .criteriablock {
+                    margin-top: 50px;
+                    margin-bottom: 100px;
+                    margin-left: 25px;
+                    margin-right: 25px;
+                    text-align: center;
+                }
 
-        .quotebg .quote p {
-            text-align: left;
-            font-size: 44px;
-            color: #3B79FF;
-            padding-left: 50px;
-            margin-top: 100px;
-        }
+                .quotebg {
+                    background-image: url("./images/elonmusk.jpg");
+                    height: 850px;
+                    max-width: 100%;
+                    background-position: right center;
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    min-height: 400px;
+                    background-color: #fbfbfb;
+                    /*opacity: 0.3;*/
+                }
 
-        .shadow {
-            -moz-box-shadow: inset 0 0 60px #cfcfcf;
-            -webkit-box-shadow: inset 0 0 60px #cfcfcf;
-            box-shadow: inset 0 0 60px #cfcfcf;
-        }
+                .quotebg .quote p {
+                    text-align: left;
+                    font-size: 44px;
+                    color: #3B79FF;
+                    padding-left: 50px;
+                    margin-top: 100px;
+                }
 
-        .autovideo {
-            margin-bottom: 100px;
-            margin-top: 50px;
-            padding: 30px;
-            text-align: center;
-        }
+                .shadow {
+                    -moz-box-shadow: inset 0 0 60px #5c606d;
+                    -webkit-box-shadow: inset 0 0 60px #5c606d;
+                    box-shadow: inset 0 0 60px #5c606d;
+                }
 
-        .formRight {
-            float: right;
-            position: 35px;
-            padding-left: 35px;
-            margin-top: 25px;
-        }
+                .autovideo {
+                    margin-bottom: 100px;
+                    margin-top: 50px;
+                    padding: 30px;
+                    text-align: center;
+                }
 
-        #reporter {
-            color: white;
-        }
+                .formRight {
+                    float: right;
+                    position: 35px;
+                    padding-left: 35px;
+                    margin-top: 25px;
+                }
 
-        .anchorline {
-            border-bottom: solid thick #fff;
-        }
+                #reporter {
+                    color: white;
+                }
 
-        .title {
-            color: white;
-            text-align: right;
-            margin-right: 25px;
-            border-bottom: 10px;
-            border-bottom-color: white;
-            border-bottom: solid;
-            padding-bottom: 15px;
-            margin-left: 15px;
-            padding-bottom: 0px;
-            padding-top: 40px;
-        }
+                .anchorline {
+                    border-bottom: solid thick #fff;
+                }
 
-        a.car img {
-            width: 150px;
-            margin: 25px;
-            float: left;
-        }
+                .title {
+                    color: white;
+                    text-align: right;
+                    margin-right: 25px;
+                    border-bottom: 10px;
+                    border-bottom-color: white;
+                    border-bottom: solid;
+                    padding-bottom: 15px;
+                    margin-left: 15px;
+                    padding-bottom: 0px;
+                    padding-top: 40px;
+                }
 
-        #chart {
-            border: solid 2px #fff;
-        }
+                a.car img {
+                    width: 150px;
+                    margin: 25px;
+                    float: left;
+                }
 
-        .submitButton {
-            color: white;
-            background: slateGrey;
-            border: none;
-            width: 150px;
-            height: 40px;
-        }
+                #chart {
+                    border: solid 2px #fff;
+                }
 
-        .description {
-            padding-left: 25px;
-        }
+                .submitButton {
+                    color: white;
+                    background: slateGrey;
+                    border: none;
+                    width: 150px;
+                    height: 40px;
+                }
 
-        .descriptiontitle {
-            padding-left: 25px;
-            font-weight: bold;
-        }
-        /*SVG*/
+                .description {
+                    padding-left: 25px;
+                }
 
-        .svg-container {
-            display: inline-block;
-            position: relative;
-            width: 100%;
-            padding-bottom: 100%;
-            /* aspect ratio */
-            vertical-align: top;
-            overflow: hidden;
-        }
-        /*axes style*/
+                .descriptiontitle {
+                    padding-left: 25px;
+                    font-weight: bold;
+                }
+                /*SVG*/
 
-        .xaxis path, .xaxis line {
-            stroke: white;
-            fill: none;
-            shape-rendering: crispEdges;
-        }
+                .svg-container {
+                    display: inline-block;
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 100%;
+                    /* aspect ratio */
+                    vertical-align: top;
+                    overflow: hidden;
+                }
+                /*axes style*/
 
-        .xaxis text {
-            font-family: sans-serif;
-            font-size: 11px;
-            fill: white;
-        }
+                .xaxis path, .xaxis line {
+                    stroke: white;
+                    fill: none;
+                    shape-rendering: crispEdges;
+                }
 
-        .yaxis path, .yaxis line {
-            stroke: white;
-            fill: none;
-            shape-rendering: crispEdges;
-        }
+                .xaxis text {
+                    font-family: sans-serif;
+                    font-size: 11px;
+                    fill: white;
+                }
 
-        .yaxis text {
-            font-family: sans-serif;
-            font-size: 11px;
-            fill: white;
-        }
+                .yaxis path, .yaxis line {
+                    stroke: white;
+                    fill: none;
+                    shape-rendering: crispEdges;
+                }
 
-        .points {
-            fill: white;
-            stroke: grey;
-        }
+                .yaxis text {
+                    font-family: sans-serif;
+                    font-size: 11px;
+                    fill: white;
+                }
 
-        .chart {
-            min-width: 320px;
-            max-width: 800px;
-            height: 220px;
-            margin: 0 auto;
-        }
+                .points {
+                    fill: white;
+                    stroke: grey;
+                }
+
+                .chart {
+                    min-width: 320px;
+                    max-width: 800px;
+                    height: 220px;
+                    margin: 0 auto;
+                }
