@@ -170,6 +170,13 @@
                     padding-left: 35px;
                     margin-top: 25px;
                 }
+                /*.formdate {
+                    position: relative;
+                    display: table;
+                    border-collapse: separate;
+                    padding-left: 10px;
+                    padding-right: 8px;
+                }*/
 
                 #reporter {
                     color: white;

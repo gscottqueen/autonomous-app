@@ -1,11 +1,18 @@
 $(document).ready(function () {
-	// $("#report-incident").submit(function(e){
-	//   e.preventDefault()
-	//   var month = $("#month_id").val()
-	//   var day = $("#day").val()
-	//   console.log(day);
-	//   writeData(incident_id, month, day, description)
-
+// Start form
+	$("#report-incident").submit(function(e){
+	  e.preventDefault()
+		var name = $("#name").val()
+		var anon = $("#checkbox-0").val()
+		var email = $("#email").val()
+		var manufacturer = $("#manufacturer").val()
+		var details = $("#details").val()
+		var date = $("#date").val()
+		alert("Thank you for your comment!");
+		console.log(name);
+	});
+// End form
+// Start building the d3 scatterplot
 	//create svg
 	var dataSection = d3.select("#dataSection")
 
@@ -100,16 +107,8 @@ $(document).ready(function () {
 //     });
 //   }
 // })
-// $(document).ready(function () {
-// $("#report-incident").submit(function(e){
-//   e.preventDefault()
-//   var month = $("#month_id").val()
-//   var day = $("#day").val()
-//   console.log(day);
-//   writeData(incident_id, month, day, description)
-// })
 
-// setting up the form
+// setting up the date pickerform
   $(document).ready(function(){
         var date_input=$('input[name="date"]'); //our date input has the name "date"
         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
@@ -119,4 +118,24 @@ $(document).ready(function () {
             todayHighlight: true,
             autoclose: true,
         })
-    })
+    });
+
+		// //jQuery to collapse the navbar on scroll
+		$(window).scroll(function() {
+		    if ($(".navbar").offset().top > 50) {
+		        $(".navbar-fixed-top").addClass("top-nav-collapse");
+		    } else {
+		        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+		    }
+		});
+
+		//jQuery for page scrolling feature - requires jQuery Easing plugin
+		$(function() {
+		    $('a.page-scroll').bind('click', function(event) {
+		        var $anchor = $(this);
+		        $('html, body').stop().animate({
+		            scrollTop: $($anchor.attr('href')).offset().top
+		        }, 1500, 'easeInOutExpo');
+		        event.preventDefault();
+		    });
+		});
